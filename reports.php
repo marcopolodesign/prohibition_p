@@ -156,7 +156,7 @@
       if($post_query->have_posts() ) { while($post_query->have_posts() ) {
       $post_query->the_post(); ?>
 
-        <div id="<?php the_title(); ?>" class="flex flex-row" >
+        <div id="<?php the_field('report_anchor'); ?>" class="flex flex-row" >
           
           <div class="w-50 h-100  center report-cover-container pp-grey-press-bg flex margin-auto">
 
@@ -198,16 +198,19 @@
                   <p class="white mb4">Please specify in the form below the mail to receive this report.</p>
 
                   <div class="form-container reports-form ">
-                    <div class="mc-field-group">
-                      <input class="fw3 pb2 pa3 pl0 white mb3" type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name...">
-                    </div>
-                    <div class="mc-field-group">
-                      <input class="fw3 pb2 pa3 pl0 white mb3"  type="email" value="" name="EMAIL" class="required email" placeholder="Email..." id="mce-EMAIL">
-                    </div>
+                    <form action="<?php the_field('form_action'); ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                              <input class="fw3 pb2 pa3 pl0 white mb3" type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name...">
+                            </div>
+                            <div class="mc-field-group">
+                              <input class="fw3 pb2 pa3 pl0 white mb3"  type="email" value="" name="EMAIL" class="required email" placeholder="Email..." id="mce-EMAIL">
+                            </div>
 
-                    <div class="clear"><input type="submit" value="Send Reports" name="subscribe" id="mc-embedded-subscribe" class="button suscribe-btn pa3">
-                    </div>
-
+                            <div class="clear"><input type="submit" value="Send Reports" name="subscribe" id="mc-embedded-subscribe" class="button suscribe-btn pa3">
+                            </div>
+                        </div>
+                    </form>
 
                   </div>
 

@@ -8,8 +8,8 @@
     <h2 id="will-be-typed" class="mb5 pp-blue"></h2>
 
     <div class="cw-cta flex">
-      <a class="pp-blue-cta-bg cw-cta-a white pa3 mr3 w-30 tc pp-corners ">Learn More</a>
-      <a class="pp-blue-cta pa3 cw-cta-a w-30 tc pp-blue-cta-inline">View Reports</a>
+      <a id="about-home-anchor" class="pointer pp-blue-cta-bg cw-cta-a white pa3 mr3 w-30 tc pp-corners ">Learn More</a>
+      <a href="reports" class="pp-blue-cta pa3 cw-cta-a w-30 tc pp-blue-cta-inline">View Reports</a>
     </div>
   </div>
 
@@ -684,24 +684,43 @@
     <h1 class="tc mb5">We work with</h1>
 
     <div class="clients-grid container flex wrap ">
-      <?php 
+    <?php
+            $argsClients = array(
+                'post_type' => 'post',
+                'posts_per_page' => 1,
+                'category_name' => 'Clients',
+                'orderby' => 'date',
+                'order'=> 'DESC'
+                
+            );
 
-        $images = get_field('clients_home');
-        $size = 'full'; // (thumbnail, medium, large, full or custom size)
+            $post_query = new WP_Query($argsClients);
+            if($post_query->have_posts() ) { while($post_query->have_posts() ) {
+            $post_query->the_post(); 
 
-       
-            
-               foreach( $images as $image ): ?>
-                    
-                      <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-                    
-                <?php endforeach; ?>
-            </ul>
-        
+              $images = get_field('client_logos');
+              $size = 'full'; // (thumbnail, medium, large, full or custom size)
+
+              if( $images ): ?>
+                <ul>
+                    <?php foreach( $images as $image ): ?>
+                        <li>
+                          <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                        </li>
+                    <?php endforeach; endif; ?>
+                </ul>
+            <?php  wp_reset_postdata();  } } ?>
+
+          
+               
+              
+    </div>
+    <div class="center flex justify-center w-100 ">
+    <a class="pa3 tc white cta-sections-inner pp-blue-cta-bg height-min" href="contact">Contact Us</a>
     </div>
 </div>
 
-<div class="twitter-feed container mv6 relative">
+<div class="twitter-feed container mv6 pt3 relative">
   <div class=" flex justify-between items-center mb5"> 
     <div class="flex items-center mb2 twitter-feed-title">
         <svg class="icw-icon" viewBox="0 0 38.928 31.734">

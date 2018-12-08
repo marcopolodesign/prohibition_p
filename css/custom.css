@@ -469,7 +469,7 @@ svg.mail-icon:hover path.mail-3 {
 
 .icw-theme-bullets ul li a:after {
   background-color: #a2bed0 !important;
-  height: 2px !important;
+  height: 1px !important;
   margin-top: 0 !important;
 }
 
@@ -1985,6 +1985,7 @@ svg.logo.hidden {
 
 .icw-cover {
   padding-left: 3vw;
+  padding-right: 3vw;
   padding-top: 8vw;
 }
 
@@ -2080,6 +2081,30 @@ svg.logo.hidden {
 
 .icw-theme-bullets div p a {
   color: #6f9ab7;
+}
+
+/* .sections-inner > div {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+
+.sections-inner > div.animate-inview {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+.menu-inner:hover a {
+  opacity: 0.6;
+  transition-delay: 0s !important;
+}
+
+.second-menu-col a:hover,
+.third-menu-col a:hover {
+  opacity: 1;
+  transition-delay: 0s !important;
 }
 
 @media (min-width: 1290px) {
@@ -2281,6 +2306,11 @@ svg.logo.hidden {
   .icw-cover {
     width: 40%;
     padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .old-cover {
+    padding-right: 3vw;
   }
 
   .icw-content {
@@ -2514,6 +2544,7 @@ svg.logo.hidden {
     min-height: unset;
     padding-top: 50px;
     padding-left: 30px;
+    padding-right: 30px;
   }
 
   .icw-cover > div {
@@ -3192,7 +3223,7 @@ svg.logo.hidden {
   }
 
   .home-clients-section {
-    display: none;
+    /* display: none; */
   }
 
   .twitter-feed > div:first-child,
@@ -3347,8 +3378,8 @@ svg.logo.hidden {
   .gross-1 h1,
   .gross-2 h1,
   .gross-3 h1 {
-    font-size: 10.5vw;
-    margin-bottom: 0;
+    font-size: 10vw;
+    margin-bottom: -7px;
   }
 
   .overlay-map-container {
@@ -3447,7 +3478,7 @@ svg.logo.hidden {
   .gross-1 p,
   .gross-2 p,
   .gross-3 p {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
 
   .overlay-map-container.z-top {
@@ -3491,8 +3522,25 @@ svg.logo.hidden {
   .bcn-loc {
     width: 100%;
   }
-}
 
-.home-clients-section {
-  display: none;
+  .icw-theme-bullets div img,
+  .icw-theme-bullets div p {
+    padding-right: 0%;
+  }
+
+  .icw-old-text {
+    display: none;
+  }
+
+  .icw-issue-container h1 {
+    margin-bottom: 5px;
+  }
+
+  img.country-icon {
+    width: 40px !important;
+  }
+
+  .icw-theme-title {
+    padding: 10px 30px;
+  }
 }

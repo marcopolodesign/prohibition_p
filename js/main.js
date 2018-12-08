@@ -3,7 +3,7 @@ jQuery(function ($) {
 
   function logoColor() {
     $(document).on('ready', () => {
-      if ($('body').is('.post-template-icw-single, .post-template-icr-single, .page-template-icw, .page-template-services, .page-template-contact')) {
+      if ($('body').is('.post-template-icw-single, .post-template-icr-single, .page-template-icw, .page-template-services, .page-template-contact, .post-template-icw-single-old')) {
         $('.cls-3-grey').addClass('white-logo');
         $('.cls-2-blue').addClass('white-logo');
         $('.menu-trigger-color').addClass('white-stroke')
@@ -94,7 +94,6 @@ jQuery(function ($) {
       }
     });
   }
-
 
 
   function progressBar() {
@@ -481,13 +480,22 @@ jQuery(function ($) {
       );
       return false;
     });
+
+    $("#about-home-anchor").on('click', function () {
+      $('html, body').animate({
+          scrollTop: $(sections[0]).offset().top - 90
+        },
+        700
+      );
+      return false;
+    });
   }
 
   function footerMobileLinks() {
     $(window).resize(function () {
       if ($('.third-footer-links').css('display') == 'none') {
         $('.first-footer-links').html(
-          '	<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">International Cannabis Weekly</a><a href="contact#team">International Country Review</a><a href="services">Our Services</a><a href="contact#team">Press</a><a href="contact#team">Sponsorship</a><a href="contact#team">Contact</a><a href="contact#team">Made by Marco Polo</a>'
+          '	<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">International Cannabis Weekly</a><a href="contact#team">International Country Review</a><a href="services">Our Services</a><a href="contact#team">Press</a><a href="contact#team">Sponsorship</a><a href="contact#team">Contact</a>'
         );
       } else {
         $('.first-footer-links').html(

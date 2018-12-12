@@ -83,7 +83,7 @@
 
               <div class="suscribe-pop-up pp-dark-blue-bg absolute top-0 left-0 w-100 h-100 flex ">
                 <div class="suscribe-inner pa4 height-min margin-auto ">
-                  <div class="w-100 flex pr3 mb4 close-icon-container">
+                  <div class="w-100 flex pr3 mb4 pointer close-icon-container">
                     <img class="close-icon" src="/wp-content/uploads/2018/12/close-button-white.svg"><p class="white o-0 close-button-caption ml2">Close</p>
                   </div>
                   <h2 class="white mb2">Download our reports</h2>
@@ -184,14 +184,14 @@
                
                 <?php if(get_field("report_inner_image_4")) : ?>
                 
-                <img class="pp-borders  margin-auto pp-shadow" src="<?php the_field('report_inner_image_4'); ?>">
+                <img class="pp-borders  absolute top-0 left-0 margin-auto pp-shadow" src="<?php the_field('report_inner_image_4'); ?>">
                
                 <?php endif; ?>
           </div>
 
                <div class="suscribe-pop-up pp-dark-blue-bg absolute top-0 left-0 w-100 h-100 flex ">
                 <div class="suscribe-inner pa4 height-min margin-auto ">
-                  <div class="w-100 flex pr3 mb4 close-icon-container">
+                  <div class="w-100 flex pr3 mb4 pointer close-icon-container">
                     <img class="close-icon" src="/wp-content/uploads/2018/12/close-button-white.svg"><p class="white o-0 close-button-caption ml2">Close</p>
                   </div>
                   <h2 class="white mb2">Download our reports</h2>

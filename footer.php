@@ -12,40 +12,57 @@
 ?>
 
 	</div><!-- #content -->
-	<div class="flex justify-between center w-50 pp-shadow shadow-nohover pp-border pa5 mv6 newsletter-box">
-		<div class="w-45">
-			<p class="pp-blue fw5 mb4">Your fix of news, 
-				intelligence and insight into 
-				the international market.</p>
+	<div class="flex flex-column justify-between relative center w-50   pa5 mv6 newsletter-box relative">
+		<div class="flex relative z-2 mb4 pb3">
+			<div class="relative appear words w-100">
+					<div class="absolute top-0 left-0 disenadoras">
+						<h1 class="platform white ttu">news</h1>
+					</div>
+					<div class="absolute  top-0 left-0 arquitectas">
+						<h1 class="platform white ttu">intelligence</h1>
+					</div>
+					<div class="absolute  top-0 left-0 arquitectos">
+						<h1 class="platform white ttu">Market Insight</h1>
+					</div>
+					<h3 class="mt4 pt4 fw3 platform white">on the cannabis market</h3>
+				</div>
+			</div>
+			<div class="flex relative z-2 justify-between">
+				<div class="w-45">
+					<p class="white mb4">The International Cannabis World, served weekly.</p>
 
-				<p class="pp-grey">We will only ever send you 
-				one email per week.</p>
+						<p class="white">We will only ever send you 
+						one email per week.</p>
+				</div>
+		
+			<div class="w-45">
+
+				<!-- Begin Mailchimp Signup Form -->
+				<div id="mc_embed_signup">
+					<form action="https://prohibitionpartners.us15.list-manage.com/subscribe/post?u=5a2dd9817b07bc76598d3f9ba&amp;id=071b37cd13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div id="mc_embed_signup_scroll">
+						
+					<div class="mc-field-group">
+						<input class="white fw3 pb2 mb3" type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name...">
+					</div>
+					<div class="mc-field-group">
+						<input class="white fw3 pb2 mb3"  type="email" value="" name="EMAIL" class="required email" placeholder="Email..." id="mce-EMAIL">
+					</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f06e54313fcea286eff9626f_1882eb7814" tabindex="-1" value=""></div>
+							<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button suscribe-btn newsletter-button pa3"></div>
+							</div>
+					</form>
+					</div>
+
+					<!--End mc_embed_signup-->
+			</div>
 		</div>
-		<div class="w-45">
-
-			<!-- Begin Mailchimp Signup Form -->
-			<div id="mc_embed_signup">
-				<form action="https://prohibitionpartners.us15.list-manage.com/subscribe/post?u=5a2dd9817b07bc76598d3f9ba&amp;id=071b37cd13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<div id="mc_embed_signup_scroll">
-					
-				<div class="mc-field-group">
-					<input class="pp-blue fw3 pb2 mb3" type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name...">
-				</div>
-				<div class="mc-field-group">
-					<input class="pp-blue fw3 pb2 mb3"  type="email" value="" name="EMAIL" class="required email" placeholder="Email..." id="mce-EMAIL">
-				</div>
-					<div id="mce-responses" class="clear">
-						<div class="response" id="mce-error-response" style="display:none"></div>
-						<div class="response" id="mce-success-response" style="display:none"></div>
-					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f06e54313fcea286eff9626f_1882eb7814" tabindex="-1" value=""></div>
-						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button suscribe-btn pa3"></div>
-						</div>
-				</form>
-				</div>
-
-				<!--End mc_embed_signup-->
-		</div>
+		<div class="absolute bg-newsletter w-100 h-100 pp-dark-blue-bg pp-corners pp-shadow shadow-nohover top-0 left-0"></div>
+		<div class="absolute pp-patern-bg w-100 top-0 left-0 o-0 h-100"></div>
 	</div>
 
 

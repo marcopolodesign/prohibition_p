@@ -245,7 +245,7 @@
             </div>
             <h2 class="pp-blue mb2 tr">Strategic<br>Consultancy</h2>
             <p class="pp-blue w-60 lh-copy tr strategic-align">Market entry and expansion strategy including regulatory relationships, licensing applications and cross-border commerce.</p>
-            <div class="services-links flex flex-wrap justify-between w-30 mv4">
+            <div class="services-links flex flex-wrap justify-end mv4">
               <a class="fw5 mb3" href="contact">Request a quote</a>
             </div>
         </div>

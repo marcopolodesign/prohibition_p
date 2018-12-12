@@ -77,9 +77,17 @@
 
             <?php endif;
 
-          endwhile;
-      endif; ?>
+          endwhile; ?>
+     
+      <div class="article-title fixed left-0 top-0 bg-white pp-shadow pp-shadow-not-hover w-100 z-5">
+        <div class="icw-bar">
+          <h3 class="platform ttu pp-dark-blue"><?php the_title(); ?></h3>
+        </div>
+
+      </div>
+<?php endif; ?>
   </div>
+
 
   <div class="previous-reviews mt7">
     <p class="pp-grey tc center w-20 mb4">Catch up on our newest articles that you might have missed</p>
@@ -148,12 +156,7 @@
 <div class="progress fixed left-0 top-0">
 </div>
 
-<div class="article-title fixed left-0 top-0 bg-white pp-shadow pp-shadow-not-hover w-100 z-5">
-  <div class="icw-bar">
-    <h3 class="platform ttu pp-dark-blue"><?php the_title(); ?></h3>
-  </div>
 
-</div>
 
 <a href="international-country-review" class="arrow-back o-0 fixed left-0 bottom-0 flex items-center">
   <div class="arrow mr3 flex ">

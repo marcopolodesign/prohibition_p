@@ -86,7 +86,7 @@
     <?php
       $args = array(
           'post_type' => 'post',
-          'posts_per_page' => 4,
+          'posts_per_page' => 8,
           'category_name' => 'International Cannabis Weekly',
           'orderby' => 'date',
           'post__not_in' => array( $post->ID ),
@@ -107,7 +107,7 @@
                 <h2 class="white fw5">Issue</h2>
                 <h1 class="h1-big white previous-issue-n"><?php the_title(); ?> </h1>
                 <img class="mv4 icw-icon-big" src="<?php the_field('featured_icon'); ?>">
-                <p width="69" class="pr2 white icw-card-t"><?php echo wp_trim_words( get_field('short_description'), 20, '...' ); ?></p>
+                <p width="69" class="pr2 white icw-card-t"><?php echo wp_trim_words( get_field('short_description'), 15, '...' ); ?></p>
               </div>
               <div class="pp-chemical-pattern absolute"></div>
           </a>  
@@ -123,15 +123,16 @@
   <div class="overflow-hidden">
 
     <div class="container flex flex-wrap flex-row justify-between center mv4">
+      <h1 class="tc w-100 pp-dark-blue" style="font-size: 24px;">Older posts</h1>
     <div class="previous-issues-nf-container flex flex-wrap flex-row justify-between center mv4">
         <?php
             $argsNF = array(
                 'post_type' => 'post',
-                'posts_per_page' => "-1",
+                'posts_per_page' => -1,
                 'category_name' => 'International Cannabis Weekly',
                 ‘nopaging’ => true,
                 'orderby' => 'date',
-                'offset' => 4,
+                'offset' => 8,
                 'order'=> 'DESC',
                 
             );
@@ -141,7 +142,7 @@
             $post_query->the_post(); ?>
 
               
-              <a class="previous-issue-nf" href="<?php the_permalink(); ?>">
+              <a class="previous-issue-nf weekly-not-featured" href="<?php the_permalink(); ?>">
                 <div class="pa4 mb5 previous-issue-nf-container pp-shadow" >
                    
             

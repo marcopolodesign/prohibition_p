@@ -194,7 +194,7 @@ jQuery(function ($) {
       }
 
 
-      $('#europe-map path#Path_11783, #europe-map #Path_11784,#europe-map path#Path_11785, #europe-map path#Path_11786,#europe-map path#Path_11788, #europe-map path#Path_11789,#europe-map path#Path_11787 ').css('fill', '#fff0');
+      $('.europe-path-class').css('fill', '#fff0');
       $("#oceania-path").css('fill', '#fff0');
 
       $('.continents-container a').addClass('active-container');
@@ -230,7 +230,7 @@ jQuery(function ($) {
 
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        $('#europe-map path#Path_11783, #europe-map #Path_11784,#europe-map path#Path_11785, #europe-map path#Path_11786,#europe-map path#Path_11788, #europe-map path#Path_11789,#europe-map path#Path_11787 ').css('fill', '#fff0');
+        $('.europe-path-class').css('fill', '#fff0');
 
         $('html, body').animate({
             scrollTop: $(overlayMapContainer).offset().top
@@ -240,7 +240,7 @@ jQuery(function ($) {
 
 
       } else {
-        $('#europe-map path#Path_11783, #europe-map #Path_11784,#europe-map path#Path_11785, #europe-map path#Path_11786,#europe-map path#Path_11788, #europe-map path#Path_11789,#europe-map path#Path_11787 ').css('fill', '#fff');
+        $('.europe-path-class').css('fill', '#fff');
       }
 
 
@@ -296,9 +296,8 @@ jQuery(function ($) {
       }
 
       $(latam).css('fill', '#fff0');
-      $(
-        '#europe-map path#Path_11783, #europe-map #Path_11784,#europe-map path#Path_11785, #europe-map path#Path_11786,#europe-map path#Path_11788, #europe-map path#Path_11789,#europe-map path#Path_11787 '
-      ).css('fill', '#fff0');
+      $('.europe-path-class').css('fill', '#fff0');
+
       $('.cw-image').css('pointer-events', 'none');
       $('.overlay-map-container, .overlay-map').css('pointer-events', 'all');
 
@@ -336,9 +335,7 @@ jQuery(function ($) {
 
       $(oceania).css('fill', '');
       $(latam).css('fill', '');
-      $(
-        '#europe-map path#Path_11783, #europe-map #Path_11784,#europe-map path#Path_11785, #europe-map path#Path_11786,#europe-map path#Path_11788, #europe-map path#Path_11789,#europe-map path#Path_11787 '
-      ).css('fill', '');
+      $('.europe-path-class').css('fill', '');
 
       $('.europe-data, .latam-data, .oceania-data').css({
         display: '',
@@ -691,24 +688,27 @@ jQuery(function ($) {
         $(images[currentImage]).css('animation', 'fade-in 0.5s');
       });
 
+      if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        const slidesArea = document.querySelectorAll('div.slides-area')
+        $(slidesArea[i])
+          .on('mouseover', () => {
+            if (!$('.suscribe-pop-up').hasClass('open')) {
+              images.forEach(image => {
+                const x = 100 * Math.random();
+                const y = 100 * Math.random();
 
-      const slidesArea = document.querySelectorAll('div.slides-area')
-      $(slidesArea[i])
-        .on('mouseover', () => {
-          if (!$('.suscribe-pop-up').hasClass('open')) {
+                image.style.transform = `translate(${x}px, ${y}px)`;
+              });
+            }
+          })
+          .on('mouseout', () => {
             images.forEach(image => {
-              const x = 100 * Math.random();
-              const y = 100 * Math.random();
-
-              image.style.transform = `translate(${x}px, ${y}px)`;
+              image.style.transform = '';
             });
-          }
-        })
-        .on('mouseout', () => {
-          images.forEach(image => {
-            image.style.transform = '';
           });
-        });
+      } else {
+
+      }
 
     });
 
@@ -768,9 +768,31 @@ jQuery(function ($) {
 
   function servicesBg() {
     $(document).on('scroll', () => {
-      const topPosition = window.pageYOffset + window.innerHeight / 2;
+      const topPosition = window.pageYOffset + 100
       const servicesSections = document.querySelectorAll('.services-content > div');
+
+      if (topPosition < servicesSections[0].offsetTop) {
+        document.querySelector('body').style.backgroundColor = ''
+      } else if (servicesSections[0].offsetTop < topPosition && topPosition < servicesSections[1].offsetTop) {
+        document.querySelector('body').style.backgroundColor = '#E3EEFF';
+      } else if (servicesSections[1].offsetTop < topPosition && topPosition < servicesSections[2].offsetTop) {
+        document.querySelector('body').style.backgroundColor = '#E3F6FF';
+      } else if (servicesSections[2].offsetTop < topPosition && topPosition < topPosition + servicesSections[2].innerHeight) {
+        document.querySelector('body').style.backgroundColor = '#F2FBFF';
+      } else {
+        document.querySelector('body').style.backgroundColor = '';
+      }
     });
+  }
+
+  function newsletterPop() {
+    document.querySelector('.newsletter-button').addEventListener('mouseover', () => {
+      document.querySelector('.bg-newsletter').style.transform = 'scale(1.02)';
+    })
+
+    document.querySelector('.newsletter-button').addEventListener('mouseout', () => {
+      document.querySelector('.bg-newsletter').style.transform = '';
+    })
   }
 
   if ($('body').hasClass('home')) {
@@ -790,7 +812,7 @@ jQuery(function ($) {
     servicesBg();
   }
 
-
+  newsletterPop();
   tiltICW();
   useInView();
   reportForm();

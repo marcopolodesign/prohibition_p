@@ -39,7 +39,7 @@
                   </div> -->
                   <a href="<?php the_permalink(); ?>"class="cr-featured-inner flex flex-row justify-between items-start pa4 bg-white pp-corners">
                       <div class="review-inner-title ">
-                        <h2 class="pp-blue mb3 fw5 country-review-h2 w-70"><?php the_title(); ?></h2>
+                        <h2 class="pp-blue mb3 country-review-h2 w-90"><?php the_title(); ?></h2>
                         <p class="pp-grey"><?php echo wp_trim_words( get_field('pp_header_text'), 20, '...' ); ?></p>
                       </div>
                       <div class="review-arrow ">

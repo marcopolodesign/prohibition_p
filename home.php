@@ -464,15 +464,45 @@
               $post_query->the_post(); ?>
 
                 
-              <a class="previous-review no-margin-home pp-shadow mb5 center flex flex-column" href="<?php the_permalink(); ?>">
+              <a class="previous-review no-margin-home pp-shadow mb5 center flex flex-column height-min" href="<?php the_permalink(); ?>">
                 
-                <div class="review-inner-img pa2 pl4 cover no-repeat bg-center" style="background-image: url(<?php the_field ('header_bg_image'); ?>)">
-                  </div>
-                  <div class="flex flex-row justify-between items-start">
-                    <div class="review-inner-title pa3 w-70 pp-blue fw5">
-                          <?php the_title(); ?>
+                <div class="review-inner-img-home pp-corners-image cover no-repeat bg-center overflow-hidden" style="background-image: url(<?php the_field ('header_bg_image'); ?>)">
+                
+                <div class="review-inner-home-text-preview flex h-100">
+                  <div class="review-inner-home-text-preview-inner pa4 ">
+                  <h6 class="mb2 white"><?php echo date("d | m | Y"); ?></h6>
+                    <p class="white pr4"><?php echo wp_trim_words( get_field('pp_header_text'), 30, '...' ); ?></p>
+                    <div class="flex flex-row no-wrap mt3">
+                        <p class="fw5 third-cta mr2  white">Read more</p>
+                        <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
+                            <defs>
+                              <style>
+                                .cls-1, .cls-2 {
+                                  fill: none;
+                                  stroke: #6F9AB7;
+                                }
+
+                                .cls-2 {
+                                  stroke-miterlimit: 10;
+                                  fill-rule: evenodd;
+                                }
+                              </style>
+                            </defs>
+                            <g id="Group_457" data-name="Group 457" transform="translate(-212.071 -382.126)">
+                              <path id="Path_444" data-name="Path 444" class="cls-1" d="M209.162,388.4l3.537-3.7" transform="translate(3.27 -0.332)"/>
+                              <path id="Path_445" data-name="Path 445" class="cls-2" d="M62.1,42.2l2.234,2.234a.11.11,0,0,1,0,.15L62.1,46.819" transform="translate(139.025 398.402) rotate(-45)"/>
+                            </g>
+                        </svg>
                     </div>
-                    <div class="review-arrow pa3">
+                  </div>
+                </div>
+              
+                </div>
+                  <div class="flex flex-row justify-between items-start pa4">
+                    <div class="review-inner-title home-review-title  w-70  ">
+                      <p class="pp-blue-cta"><?php the_title(); ?></p>
+                    </div>
+                    <div class="review-arrow ">
                       <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
                         <defs>
                           <style>
@@ -627,11 +657,11 @@
               <a class="press-home-link previous-review no-margin-home pp-shadow mb5 center flex flex-column" href="<?php the_field ('press_release_link') ?>">
               
                   <div class="review-inner-img pa2 pl4 cover bg-center no-repeat" style="background-image: url(<?php the_field ('header_bg_image'); ?>)"></div>
-                  <div class="flex flex-row justify-between items-start margin-auto">
-                    <div class="review-inner-title pa3 w-70">
-                      <h5 class="fw5 pp-blue-cta"><?php the_title(); ?></h5>
+                  <div class="flex flex-row justify-between items-start margin-auto pa4">
+                    <div class="review-inner-title  w-70">
+                      <h5 class="pp-blue-cta"><?php the_title(); ?></h5>
                     </div>
-                    <div class="review-arrow pa3">
+                    <div class="review-arrow ">
                       <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
                         <defs>
                           <style>
@@ -726,7 +756,7 @@
                
               
     </div>
-    <div class="center flex justify-center w-100 ">
+    <div class="center flex justify-center w-100 mt4 ">
     <a class="pa3 tc white cta-sections-inner pp-blue-cta-bg height-min" href="contact">Contact Us</a>
     </div>
 </div>

@@ -6,7 +6,7 @@
   <div class="w-30 sticky press-header-container"> 
 
     <div class="press-header pp-shadow  pa4">
-      <h1 class="pp-blue"><?php the_title(); ?></h1>
+      <h1 class="pp-blue mb0"><?php the_title(); ?></h1>
       <h2 class="pp-blue mb2">Are you a member of the media?</h2>
       <?php if( get_field('press_header_text') ): ?>
         <div class="mv2"><?php the_field('press_header_text'); ?></div>
@@ -93,8 +93,8 @@
 
   </div> 
 
-  <div class="press-content w-70 ml4 flex flex-column">
-    <h2 class="fw5 pp-blue mb3 press-section-title">Press Releases</h2>          
+  <div class="press-content w-70 ml5 flex flex-column">
+    <h2 class="pp-blue mb3 press-section-title">Press Releases</h2>          
     <div class="press-content-inner flex flex-row flex-wrap center justify-center">
      
 
@@ -114,14 +114,18 @@
           $post_query->the_post(); ?>
 
             <?php if (get_field('header_bg_image')): ?>
-            <a class="previous-review press-release pp-shadow mb5 center flex flex-column" href="<?php the_field ('press_release_link') ?>">
+            <a class="press-release mb5 center flex" href="<?php the_field ('press_release_link') ?>">
                 
-                <div class="review-inner-img pa2 pl4 cover bg-center no-repeat" style="background-image: url(<?php the_field ('header_bg_image'); ?>)"></div>
-                <div class="flex flex-row justify-between items-start margin-auto">
-                  <div class="review-inner-title pa3 w-70">
-                    <h5 class="pp-blue-cta"><?php the_title(); ?></h5>
+                <div class="relative w-100 h-100 overflow-hidden">
+                  <div class="review-inner-img cover bg-center no-repeat" style="background-image: url(<?php the_field ('header_bg_image'); ?>)"></div>
+                </div>
+                <div class="flex flex-column justify-center items-center margin-auto press-release-info pa4">
+                  <div class="review-inner-title">
+                  <h2 class="pp-blue-cta tc mb2">December 2018</h2>
+
+                    <h5 class="pp-blue-cta tc"><?php the_title(); ?></h5>
                   </div>
-                  <div class="review-arrow pa3">
+                  <div class="review-arrow mt2">
                     <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
                       <defs>
                         <style>
@@ -152,7 +156,7 @@
     </div>
 
    
-    <h2 class="fw5 pp-blue mt6 mb3 press-section-title">Prohibition Partners in the media</h2>                     
+    <h2 class="pp-blue mt6 mb3 press-section-title">Prohibition Partners in the media</h2>                     
     <div class="pp-media flex flex-row flex-wrap  justify-around">
       <?php
             $argsNew = array(

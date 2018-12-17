@@ -2,19 +2,15 @@
 
 <?php get_header();?>
 
-<div class='country-review-big-container'>
-    <div class="starter-div container country-review-starter">
-      <div class="flex justify-between country-review-title ">
-        <h1 class="w-50 pp-blue mv-0 icr-title"><?php the_title(); ?></h1>
-        <div class="flex flex-column justify-between pv3">
-          <p class="pp-blue-cta mb2">Search</p>
-          <p class="pp-blue-cta mb2">Order by date</p>
-        </div>
-      </div>
-    </div>
+<div class='country-review-big-container absolute w-100 z-2'>
+  <div class="w-40 center">        
+  <h1 class="white center mb3 icr-title tc"><?php the_title(); ?></h1>
+  <h2 class="white tc relative icr-featured-article">Featured article</h2>
+  </div>
+</div>
 
 
-    <div class="featured-cr mt2 mv5 container">
+    <div class="featured-cr mb5 pp-dark-blue-bg">
     <?php
         $argsCR = array(
             'post_type' => 'post',
@@ -31,41 +27,20 @@
         $post_query->the_post(); ?>
 
           
-            <div class="pp-corners pp-shadow" >
-              <div class="cover no-repeat bg-center pp-corners pa4 pp-shadow cr-featured-div" style="background-image: url(<?php the_field ('header_bg_image'); ?>)">
-                  <!-- <div class="pa4">
-                    <h6 class="mb2 white"><?php echo date("d | m | Y"); ?></h6>
-                  <h2 class="white fw5">Europe</h2>
-                  </div> -->
-                  <a href="<?php the_permalink(); ?>"class="cr-featured-inner flex flex-row justify-between items-start pa4 bg-white pp-corners">
-                      <div class="review-inner-title ">
-                        <h2 class="pp-blue mb3 country-review-h2 w-90"><?php the_title(); ?></h2>
-                        <p class="pp-grey"><?php echo wp_trim_words( get_field('pp_header_text'), 20, '...' ); ?></p>
+            <div class="relative overflow-hidden">
+              <div class="cover no-repeat bg-center cr-featured-div absolute w-100 top-0 left-0" style="background-image: url(<?php the_field ('header_bg_image'); ?>)"></div>
+                  <a href="<?php the_permalink(); ?>" class="cr-featured-inner flex flex-row justify-center w-50 items-start pa4 relative z-2 w-50 ">
+                    <div class="review-inner-title-featured ">
+                      <h2 class="white tc mb3 country-review-h2"><?php the_title(); ?></h2>
+                      <p class="white tc"><?php echo wp_trim_words( get_field('pp_header_text'), 20, '...' ); ?></p>
+                      <div class="center w-max-c">
+                        <p class="white center tc mv4 fw3 icr-featured-article-cta">Read More</p>
                       </div>
-                      <div class="review-arrow ">
-                        <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
-                          <defs>
-                            <style>
-                              .cls-1, .cls-2 {
-                                fill: none;
-                                stroke: #1fa5ff;
-                              }
-
-                              .cls-2 {
-                                stroke-miterlimit: 10;
-                                fill-rule: evenodd;
-                              }
-                            </style>
-                          </defs>
-                          <g id="Group_457" data-name="Group 457" transform="translate(-212.071 -382.126)">
-                            <path id="Path_444" data-name="Path 444" class="cls-1" d="M209.162,388.4l3.537-3.7" transform="translate(3.27 -0.332)"/>
-                            <path id="Path_445" data-name="Path 445" class="cls-2" d="M62.1,42.2l2.234,2.234a.11.11,0,0,1,0,.15L62.1,46.819" transform="translate(139.025 398.402) rotate(-45)"/>
-                          </g>
-                        </svg>
-                      </div>
+                    </div>
+                      
                     </a>
 
-              </div>
+             
               
             </div>
           
@@ -91,7 +66,7 @@
         $post_query->the_post(); ?>
 
           
-            <a class="masonry-child pp-corners pp-shadow pp-shadow-nohover" href="<?php the_permalink(); ?>">
+            <a class="masonry-child overflow-hidden pp-corners pp-shadow pp-shadow-nohover" href="<?php the_permalink(); ?>">
                 
               
               <div class="review-inner-img cover no-repeat bg-center pp-corners-image <?php the_field("icr_height"); ?>" style="background-image: url(<?php the_field ('header_bg_image'); ?>)"></div>

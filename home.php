@@ -588,7 +588,7 @@
                       <h2 class="white fw5">Issue</h2>
                       <h1 class="h1-big white previous-issue-n"><?php the_title(); ?> </h1>
                       <img class="mv4 icw-icon-big" src="<?php the_field('featured_icon'); ?>">
-                      <p width="69" class="pr2 white icw-card-t"><?php echo wp_trim_words( get_field('short_description'), 20, '...' ); ?></p>
+                      <p width="69" class="pr2 white icw-card-t"><?php echo wp_trim_words( get_field('short_description'), 15, '...' ); ?></p>
                     </div>
                     <div class="pp-chemical-pattern absolute"></div>
                 </a>  
@@ -682,7 +682,7 @@
 <div class="clients home-clients-section mv6 center">
     <h1 class="tc mb5">We work with</h1>
 
-    <div class="clients-grid container flex wrap ">
+    <div class="clients-grid relative sponsors container flex wrap ">
     <?php
             $argsClients = array(
                 'post_type' => 'post',
@@ -700,16 +700,28 @@
               $images = get_field('client_logos');
               $size = 'full'; // (thumbnail, medium, large, full or custom size)
 
-              if( $images ): ?>
-                <ul>
+              ?>
+                <ul class="first-grid">
                     <?php foreach( $images as $image ): ?>
                         <li>
                           <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
                         </li>
-                    <?php endforeach; endif; ?>
+                    <?php endforeach; ?>
                 </ul>
-            <?php  wp_reset_postdata();  } } ?>
+          
 
+          
+              <?php 
+                $imagesNew = get_field('clients_logos_2');
+
+                ?>                  <ul class="second-grid">
+                      <?php foreach( $imagesNew as $imageNew ): ?>
+                          <li>
+                            <?php echo wp_get_attachment_image( $imageNew['ID'], $size ); ?>
+                          </li>
+                      <?php endforeach; ?>
+                  </ul>
+              <?php  wp_reset_postdata();  } }?>
           
                
               

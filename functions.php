@@ -135,6 +135,8 @@ function prohibition_partners_scripts() {
 	wp_enqueue_script( 'prohibition_partners-type', get_template_directory_uri() . '/js/typeit.min.js',  array( 'jquery' ), '0.5.2' , true);
 
 	wp_enqueue_script( 'prohibition_partners-inview', get_template_directory_uri() . '/js/inview.js',  array( 'jquery' ), '0.5.2' , true);
+
+	wp_enqueue_script( 'prohibition_partners-anime', get_template_directory_uri() . '/js/anime.js',  array( 'jquery' ), '0.5.2' , true);
 	
 
 	wp_enqueue_script( 'prohibition_partners-main', get_template_directory_uri() . '/js/main.js',  array( 'jquery' ), '0.5.2' , true);

@@ -148,7 +148,8 @@
 				<a class="white fw3  f1" href="international-cannabis-weekly">International <br>Cannabis Weekly</a>
 			</div>
 
-				<div class="third-menu-col ">
+			<div class="third-menu-col ">
+				<a class="white fw3 mb4 f1 db" href="contact#team">Team</a>
 				<a class="white fw3 mb4 f1 db" href="press">Press</a>
 				<a class="white fw3 mb4 f1 db" href="press#sponsorship">Sponsorship</a>
 				<a class="white fw3 mb4 f1 db" href="http://cannabis-europa.com" target="_blank">Cannabis<br>Europa</a>

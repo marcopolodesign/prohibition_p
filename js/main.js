@@ -65,14 +65,17 @@ jQuery(function ($) {
     const menuTrigger = document.querySelector('div.menu');
     const menu = document.querySelector('div.menu-container');
     const menuInner = document.querySelector('div.menu-inner');
-    const menuLinks = document.querySelectorAll('.second-menu-col a, .third-menu-col a');
+    const menuLinks = document.querySelectorAll('.second-menu-col a, .third-menu-col a, .first-menu-col');
+    const menuBg = document.querySelector('.menu-container .pp-patern-bg')
 
     $(menuTrigger).on('click', () => {
       $(menu).toggleClass('hidden');
       $(menuInner).toggleClass('hidden');
       $(menu).toggleClass('translate-up');
+      $(menuBg).toggleClass('open');
       $('svg.logo').toggleClass('hidden');
       $('div.menu-trigger').html('<img class="menu-trigger" src="/wp-content/uploads/2018/12/close-button-white.svg">')
+
 
       if ($(menu).hasClass('hidden')) {
         $('div.menu-trigger').html("<svg class='menu-trigger' viewBox='0 0 30.2 17'><defs><style>.menu-trigger-color {fill: none;stroke: #6f9ab7;stroke-width: 3px;}</style></defs><g id='Group_1482_1_' transform='translate(-1159.4 -54.048)'><g id='Group_11_1_' transform='translate(-5 5.948)'><path id='Path_83_1_' class='menu-trigger-color' d='M1194.6,49.6h-30.2'/><path id='Path_84_1_' class='menu-trigger-color' d='M1194.6,56.6h-30.2'/><path id='Path_13230_1_' class='menu-trigger-color' d='M1194.6,63.6h-30.2'/> </g></g></svg>")
@@ -81,8 +84,8 @@ jQuery(function ($) {
 
 
       menuLinks.forEach((menuLinks, index) => {
-        const delay = index * 10;
-        menuLinks.style.transitionDelay = delay + 400 + 'ms';
+        const delay = index * 25;
+        menuLinks.style.transitionDelay = delay + 600 + 'ms';
       });
       $(menuLinks).toggleClass('translate-up');
 
@@ -756,7 +759,7 @@ jQuery(function ($) {
 
 
   function useInView() {
-    inView('.previous-issue-nf-container, .icw-theme-bullets ul li, .press-release, .pp-media > a')
+    inView('.previous-issue-nf-container, .icw-theme-bullets ul li, .press-release, .pp-media > a, .overlay-pattern-sponsorship, .sponsorship-starter, .sponsorship-resources')
       .on('enter', elements => {
         elements.classList.add('animate-inview');
       })
@@ -795,6 +798,48 @@ jQuery(function ($) {
     })
   }
 
+  function animateSponsorshipNumbers() {
+
+    $(window).on('load', () => {
+
+      anime({
+        targets: '.numbers-icon path, .social-sponsorship-icon path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 2000,
+
+        // delay: function (el, i) {
+        //   return i * 250
+        // },
+        direction: 'alternate',
+        loop: true
+      });
+
+    })
+  }
+
+  function appearClientsGrid() {
+    const firstGrid = document.querySelector('ul.first-grid');
+    const secondGrid = document.querySelector('.clients-grid.relative.sponsors ul:last-child');
+
+    setInterval(() => {
+      setTimeout(() => {
+        secondGrid.style.opacity = '1';
+        secondGrid.classList.remove('not-active')
+        firstGrid.style.opacity = '0';
+        firstGrid.classList.add('not-active')
+
+      }, 0);
+      setTimeout(() => {
+        secondGrid.style.opacity = '0';
+        secondGrid.classList.add('not-active')
+        firstGrid.style.opacity = '1';
+        firstGrid.classList.remove('not-active')
+      }, 5000);
+    }, 10000);
+
+  }
+
   if ($('body').hasClass('home')) {
     animateMapText();
     indexHome();
@@ -812,6 +857,8 @@ jQuery(function ($) {
     servicesBg();
   }
 
+  appearClientsGrid();
+  animateSponsorshipNumbers();
   newsletterPop();
   tiltICW();
   useInView();

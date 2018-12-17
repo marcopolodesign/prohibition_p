@@ -88,7 +88,7 @@
  
 </div>
 
-<div class="team flex flex-wrap container justify-center mt5">
+<div class="team flex flex-wrap container justify-center mt5" id="team">
           <?php
             $argsTeam = array(
                 'post_type' => 'post',

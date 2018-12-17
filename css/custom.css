@@ -634,13 +634,13 @@ img.service-image {
   width: 100px;
 }
 
-.featured-logos ul li:nth-child(2) img {
+.featured-logos ul li:nth-child(3) img {
   transform: scale(1.5);
 }
 
-.featured-logos ul li:nth-child(3) img {
+/* .featured-logos ul li:nth-child() img {
   transform: scale(0.7);
-}
+} */
 
 .featured-logos ul {
   list-style: none;
@@ -1092,50 +1092,74 @@ p.cr-nf-title,
 
 .menu-container {
   transform: scaleY(0);
-  transition: all 0.4s 0.3s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
+  transition: all 0.6s 0.4s cubic-bezier(0.72, 0.01, 0.54, 0.98);
+  -webkit-transition: all 0.6s 0.4s cubic-bezier(0.72, 0.01, 0.54, 0.98);
+  -moz-transition: all 0.6s 0.4s cubic-bezier(0.72, 0.01, 0.54, 0.98);
   transform-origin: bottom;
 }
 
 .menu-container.translate-up {
   transform: scaleY(1);
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
+  transition: all 0.6s cubic-bezier(0.72, 0.01, 0.54, 0.98);
+  -webkit-transition: all 0.6s cubic-bezier(0.72, 0.01, 0.54, 0.98);
+  -moz-transition: all 0.6s cubic-bezier(0.72, 0.01, 0.54, 0.98);
 }
 
 .menu-inner {
-  transition: all 0.4s 0.4s ease;
-  -webkit-transition: all 0.4s 0.4s ease;
-  -moz-transition: all 0.4s 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -webkit-transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -moz-transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
 }
 
 .menu-inner.hidden {
   opacity: 0;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -webkit-transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -moz-transition: all 0.4s c ubic-bezier(0.13, 0.5, 0.29, 0.96);
+}
+
+.first-menu-col,
+.second-menu-col a,
+.third-menu-col a {
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -webkit-transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -moz-transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  opacity: 0;
+
 }
 
 .second-menu-col a,
 .third-menu-col a {
-  transform: translateY(20px);
-  transition: all 0.4s 0.4s ease;
-  -webkit-transition: all 0.4s 0.4s ease;
-  -moz-transition: all 0.3s 0.4s ease;
-  opacity: 0;
   font-family: 'Platform', Helvetica, sans-serif;
   text-transform: uppercase;
 }
 
+.first-menu-col.translate-up,
 .second-menu-col a.translate-up,
 .third-menu-col a.translate-up {
   transform: translateY(0);
   opacity: 1;
-  transition: all 0.4s 0.4s ease;
-  -webkit-transition: all 0.4s 0.4s ease;
-  -moz-transition: all 0.3s 0.4s ease;
+  transition: all 0.8s 0.5s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -webkit-transition: all 0.8s 0.5s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -moz-transition: all 0.8s 0.5s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+}
+
+.menu-container .pp-patern-bg {
+  opacity: 0;
+  transform: scale(1.2);
+  -webkit-transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -moz-transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  transition: all 0.4s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+}
+
+.menu-container .pp-patern-bg.open {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transition: all 0.8s 0.5s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  -moz-transition: all 0.8s 0.5s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+  transition: all 0.8s 0.5s cubic-bezier(0.13, 0.5, 0.29, 0.96);
+
 }
 
 .country-review-image {
@@ -2069,7 +2093,7 @@ svg.logo.hidden {
 .cr-title-home,
 .cr-title,
 .icw-theme-bullets div p a,
-.review-inner-title {
+.review-inner-title p:first-child {
   text-transform: lowercase;
 }
 
@@ -2077,7 +2101,7 @@ svg.logo.hidden {
 .cr-title::first-letter,
 .icw-theme-bullets div p::first-letter,
 .review-inner-title::first-letter,
-.review-inner-title p {
+.review-inner-title p:first-child {
   text-transform: capitalize;
 }
 
@@ -2112,6 +2136,7 @@ svg.logo.hidden {
 .third-menu-col a:hover {
   opacity: 1;
   transition-delay: 0s !important;
+
 }
 
 @media (min-width: 1290px) {
@@ -2164,15 +2189,86 @@ svg.logo.hidden {
   }
 }
 
-.disenadoras {
+
+@keyframes appearingClients {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+    display: block;
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+
+  }
+}
+
+.disenadoras,
+.featured-logos ul li:nth-child(1),
+.featured-logos ul li:nth-child(2) {
   animation: appearingH1 6s 0s infinite linear both;
 }
 
-.arquitectas {
+.first-grid,
+.second-grid {
+  -webkit-transition: all 0.5s 0.15s ease;
+  -moz-transition: all 0.5s 0.15s ease;
+  transition: all 0.5s 0.15s ease;
+}
+
+.first-grid.not-active li,
+.second-grid.not-active li {
+  transform: translateY(-20px);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+.first-grid li,
+.second-grid li {
+  transform: translateY(0px);
+}
+
+
+.second-grid {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* animation: appearingClients 6s 3s infinite linear both; */
+}
+
+
+.arquitectas,
+.featured-logos ul li:nth-child(3),
+.featured-logos ul li:nth-child(4) {
   animation: appearingH1 6s 2s infinite linear both;
 }
 
-.arquitectos {
+.arquitectos,
+.featured-logos ul li:nth-child(5),
+.featured-logos ul li:nth-child(6) {
   animation: appearingH1 6s 4s infinite linear both;
 }
 
@@ -2209,6 +2305,84 @@ a.weekly-not-featured:nth-child(8) {
   display: none;
 }
 
+
+.sponsorship-featured-reports img {
+  /* max-width: 70%; */
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 450px !important; */
+}
+
+.numbers-investors h1 input,
+.numbers-social h1 input {
+  width: 100%;
+  border-width: 0px;
+  text-align: center;
+  background-color: #fff0;
+}
+
+.overlay-pattern-sponsorship {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(1.3);
+  -webkit-transition: all 0.3 ease;
+  transition: all 1s ease;
+  border-radius: 0 !important;
+  opacity: 0;
+}
+
+.overlay-pattern-sponsorship.animate-inview {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.featured-logos ul {
+  position: relative
+}
+
+.featured-logos ul li:nth-child(odd) {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+.featured-logos ul li:nth-child(even) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: 100px;
+}
+
+
+.numbers-icon {
+  height: 50px;
+}
+
+.sponsorship-starter,
+.sponsorship-resources {
+  opacity: 0;
+  transform: translateX(-40px);
+  -wekbkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sponsorship-resources {
+  transform: translateX(40px);
+}
+
+
+
+.sponsorship-starter.animate-inview,
+.sponsorship-resources.animate-inview {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 @media (min-width: 1600px) {
   .container-icw {
@@ -3074,9 +3248,6 @@ a.weekly-not-featured:nth-child(8) {
     margin-bottom: 15px;
   }
 
-  .sponsorship-numbers>div {
-    display: none;
-  }
 
   .press-starter {
     flex-wrap: wrap;
@@ -3152,6 +3323,13 @@ a.weekly-not-featured:nth-child(8) {
 
   .sponsorship-numbers {
     margin: 60px auto;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-top: 9rem;
+  }
+
+  .sponsorship-numbers>div:last-child {
+    margin-top: 30px;
   }
 
   .featured-report {
@@ -3694,5 +3872,41 @@ a.weekly-not-featured:nth-child(8) {
     margin-top: 10px;
     padding-top: 30px;
     width: 40vw;
+  }
+
+
+  .featured-logos ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .featured-logos ul li {}
+
+  .featured-logos ul li:nth-child(odd) {
+    position: absolute;
+    left: 25.5%;
+    top: 0;
+
+  }
+
+  .featured-logos ul li:nth-child(even) {
+    position: absolute;
+    left: 25.5%;
+    bottom: -60px;
+    margin-left: 0;
+    top: unset;
+  }
+
+  .featured-logos ul li:nth-child(6) {
+    bottom: -224px;
+  }
+
+  .featured-logos ul li:nth-child(2) {
+    bottom: -150px;
+  }
+
+  .featured-logos ul li:nth-child(4) {
+    bottom: -120px;
   }
 }

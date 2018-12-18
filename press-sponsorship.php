@@ -125,7 +125,7 @@
 
                     <h5 class="pp-blue-cta tc"><?php the_title(); ?></h5>
                   </div>
-                  <div class="review-arrow mt2">
+                  <div class="review-arrow mt3">
                     <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
                       <defs>
                         <style>
@@ -156,16 +156,16 @@
     </div>
 
    
-    <h2 class="pp-blue mt6 mb3 press-section-title">Prohibition Partners in the media</h2>                     
+    <h2 class="pp-blue mt6 mb4 press-section-title">Prohibition Partners in the media</h2>                     
     <div class="pp-media flex flex-row flex-wrap  justify-around">
       <?php
             $argsNew = array(
-                'post_type' => 'post',
-                'posts_per_page' => -1,
-                'category_name' => 'PP in the Media',
-                'orderby' => 'date',
-                'post__not_in' => array( $post->ID ),
-                'order'=> 'DESC'
+              'post_type' => 'post',
+              'posts_per_page' => -1,
+              'category_name' => 'PP in the Media',
+              'orderby' => 'date',
+              'post__not_in' => array( $post->ID ),
+              'order'=> 'DESC'
                 
             );
 
@@ -173,42 +173,34 @@
             if($post_query->have_posts() ) { while($post_query->have_posts() ) {
             $post_query->the_post(); ?>
 
-              <?php if (get_field('header_bg_image')): ?>
-              <a class="w-50 previous-review mb5 center flex flex-row" href="<?php the_field('press_release_link'); ?>">
-                  
-                <div class="media-logo w-20 pa2 cover no-repeat pp-grey-press-bg ">
-                  <img src="<?php the_field ('channel_logo'); ?>">
+              <?php if (get_field('press_release_link')): ?>
+              <a class="w-100 pv3 center flex flex-row justify-between items-center pp-media-container" href="<?php the_field('press_release_link'); ?>">
+              <div class="flex items-center">  
+                <img class="media-logo mr4" src="<?php the_field ('channel_logo'); ?>">
+                <h5 class="pp-blue-cta mr4 fw3"><?php the_time("d | m | Y"); ?></h5>
+                <h5 class="pp-blue fw3"><?php the_title(); ?></h5>
                 </div>
-              
-                <div class="flex flex-column no-wrap pp-shadow pp-corners">
-                  <div class="review-inner-img pa2 pl4 cover no-repeat" style="<?php image_background('header_bg_image'); ?>)">
-                  </div>
-                  <div class="flex flex-row justify-between items-start margin-auto">
-                    <div class="review-inner-title pa3 w-70">
-                          <h5 class="pp-blue-cta"><?php the_title(); ?></h5>
-                    </div>
-                    <div class="review-arrow pa3">
-                      <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
-                        <defs>
-                          <style>
-                            .cls-1, .cls-2 {
-                              fill: none;
-                              stroke: #a2bed0;;
-                            }
+                <div class="review-arrow pp-media-arrow pa3 flex no-wrap items-center">
+                  <h5 class="fw3 mr2">Read</h5>
+                  <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
+                    <defs>
+                      <style>
+                        .cls-1, .cls-2 {
+                          fill: none;
+                          stroke: #a2bed0;;
+                        }
 
-                            .cls-2 {
-                              stroke-miterlimit: 10;
-                              fill-rule: evenodd;
-                            }
-                          </style>
-                        </defs>
-                        <g id="Group_457" data-name="Group 457" transform="translate(-212.071 -382.126)">
-                          <path id="Path_444" data-name="Path 444" class="cls-1" d="M209.162,388.4l3.537-3.7" transform="translate(3.27 -0.332)"/>
-                          <path id="Path_445" data-name="Path 445" class="cls-2" d="M62.1,42.2l2.234,2.234a.11.11,0,0,1,0,.15L62.1,46.819" transform="translate(139.025 398.402) rotate(-45)"/>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
+                        .cls-2 {
+                          stroke-miterlimit: 10;
+                          fill-rule: evenodd;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Group_457" data-name="Group 457" transform="translate(-212.071 -382.126)">
+                      <path id="Path_444" data-name="Path 444" class="cls-1" d="M209.162,388.4l3.537-3.7" transform="translate(3.27 -0.332)"/>
+                      <path id="Path_445" data-name="Path 445" class="cls-2" d="M62.1,42.2l2.234,2.234a.11.11,0,0,1,0,.15L62.1,46.819" transform="translate(139.025 398.402) rotate(-45)"/>
+                    </g>
+                  </svg>
                 </div>
               </a>  
               

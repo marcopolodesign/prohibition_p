@@ -14,7 +14,7 @@
       <div class="flex flex-column  justify-center margin-auto h-100 icw-issue-container">
         <h1 class="white">Issue <?php the_title(); ?></h1>
         <div class="flex flex-row">
-          <h2 class="white icw-date"><?php echo date("d.m.Y"); ?></h2>
+          <h2 class="white icw-date"><?php the_time("d.m.Y"); ?></h2>
           <!-- <h2 class="white">Topic</h2> -->
         </div>
 
@@ -83,7 +83,7 @@
            
           
             <div class="issue-inner">
-              <h6 class="mb2 white"><?php echo date("d | m | Y"); ?></h6>
+              <h6 class="mb2 white"><?php the_time("d | m | Y"); ?></h6>
               <h2 class="white fw5">Issue</h2>
               <h1 class="h1-big white previous-issue-n"><?php the_title(); ?> </h1>
               <img class="mv4 icw-icon-big" src="<?php the_field('featured_icon'); ?>">

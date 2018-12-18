@@ -470,7 +470,7 @@
                 
                 <div class="review-inner-home-text-preview flex h-100">
                   <div class="review-inner-home-text-preview-inner pa4 ">
-                  <h6 class="mb2 white"><?php echo date("d | m | Y"); ?></h6>
+                  <h6 class="mb2 white"><?php the_time("d | m | Y"); ?></h6>
                     <p class="white pr4"><?php echo wp_trim_words( get_field('pp_header_text'), 30, '...' ); ?></p>
                     <div class="flex flex-row no-wrap mt3">
                         <p class="fw5 third-cta mr2  white">Read more</p>
@@ -614,7 +614,7 @@
                   
                   
                     <div class="issue-inner">
-                      <h6 class="mb2 white"><?php echo date("d | m | Y"); ?></h6>
+                      <h6 class="mb2 white"><?php the_time("d | m | Y"); ?></h6>
                       <h2 class="white fw5">Issue</h2>
                       <h1 class="h1-big white previous-issue-n"><?php the_title(); ?> </h1>
                       <img class="mv4 icw-icon-big" src="<?php the_field('featured_icon'); ?>">

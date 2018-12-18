@@ -24,7 +24,7 @@
 					<div class="absolute  top-0 left-0 arquitectos">
 						<h1 class="platform white ttu">Market Insight</h1>
 					</div>
-					<h3 class="mt4 pt4 fw3 platform white">on the cannabis market</h3>
+					<h3 class="mt3 pt4 fw3 platform white">on the cannabis market</h3>
 				</div>
 			</div>
 			<div class="flex relative z-2 justify-between">

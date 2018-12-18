@@ -103,7 +103,7 @@
               
             
               <div class="issue-inner relative">
-                <h6 class="mb2 white"><?php echo date("d | m | Y"); ?></h6>
+                <h6 class="mb2 white"><?php the_time("d | m | Y"); ?></h6>
                 <h2 class="white fw5">Issue</h2>
                 <h1 class="h1-big white previous-issue-n"><?php the_title(); ?> </h1>
                 <img class="mv4 icw-icon-big" src="<?php the_field('featured_icon'); ?>">

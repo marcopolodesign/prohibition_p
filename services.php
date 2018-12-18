@@ -338,21 +338,59 @@
   <div class="clients mv6 center">
     <h1 class="tc mb4">We work with</h1>
 
-    <div class="clients-grid container flex wrap ">
-      <?php 
+    <div class="  height-min relative">
+    <div class="clients-grid container relative sponsors flex wrap center">
+    <?php
+            $argsClients = array(
+                'post_type' => 'post',
+                'posts_per_page' => 1,
+                'category_name' => 'Clients',
+                'orderby' => 'date',
+                'order'=> 'DESC'
+                
+            );
 
-        $images = get_field('clients_gallery');
-        $size = 'full'; // (thumbnail, medium, large, full or custom size)
+            $post_query = new WP_Query($argsClients);
+            if($post_query->have_posts() ) { while($post_query->have_posts() ) {
+            $post_query->the_post(); 
 
-        if( $images ): ?>
-            <ul>
-                <?php foreach( $images as $image ): ?>
-                    <li>
-                      <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif; ?>
+              $images = get_field('client_logos');
+              $size = 'full'; // (thumbnail, medium, large, full or custom size)
+
+              ?>
+                <ul class="first-grid">
+                    <?php foreach( $images as $image ): ?>
+                        <li>
+                          <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+          
+
+          
+              <?php 
+                $imagesNew = get_field('clients_logos_2');
+
+                ?>                
+                  <ul class="second-grid">
+                      <?php foreach( $imagesNew as $imageNew ): ?>
+                          <li>
+                            <?php echo wp_get_attachment_image( $imageNew['ID'], $size ); ?>
+                          </li>
+                      <?php endforeach; ?>
+                  </ul>
+              <?php  wp_reset_postdata();  } }?>
+            
+        
+           
+    </div>
+    
+    
+    
+    
+    
+    
+    
     </div>
   </div>
 

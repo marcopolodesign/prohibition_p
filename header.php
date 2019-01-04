@@ -118,20 +118,18 @@
 		<div class="absolute pp-patern-bg w-100 h-100"></div>
 		<div class="menu-inner hidden flex general-container justify-between items-end w-90">
 			<div class="first-menu-col mr6"> 
-
+		
+			<div class="london-off">
+            <p class="white mb4"><span class="fw5">London<br>PP Inteligence Ltd</span><br>3 Hill Street, W1J 5AL,<br>
+           London, United Kingdom</p>
+					</div>
+					
 			 <div class="bcn-off">
             <p class="white mb4"><span class="fw5">Barcelona<br>PP Inteligence Ltd</span><br>Carrer d'Estruc 9, 08002,<br>
             Barcelona, Spain</p>
 					</div>
-					
-				<div class="london-off">
-            <p class="white mb4"><span class="fw5">London<br>PP Inteligence Ltd</span><br>3 Hill Street, W1J 5AL,<br>
-           London, United Kingdom</p>
-          </div>
-
-          
-
-					<p class="white mb4"><a href="#" class="white">info@prohibitionpartners.com</a><br>+44 020 7409 5042</p>
+			
+					<p class="white mb4"><a href="#" class="white">info@prohibitionpartners.com</a><br>+44 20 7409 5042</p>
 						<div class="footer-social flex justify-between w-80">
 								<a href="http://twitter.com/prohibition_p" class="footer-social-icon di mr2"href="/"><img src="/wp-content/uploads/2018/11/Twitter_IconOnly_Black.svg"></a>
 								<a href="https://www.instagram.com/prohibitionpartners"  class="footer-social-icon di mr2"href="/"><img src="/wp-content/uploads/2018/11/instagram_icon_inline.svg"></a>
@@ -145,14 +143,34 @@
 				<a class="white fw3 mb4 f1 db" href="reports">Reports</a>
 				<a class="white fw3 mb4 f1 db" href="services">Services</a>
 				<a class="white fw3 mb4 f1 db" href="international-country-review">International <br>Country Review</a>
-				<a class="white fw3  f1" href="international-cannabis-weekly">International <br>Cannabis Weekly</a>
+				<a class="white fw3  f1 db" href="international-cannabis-weekly">International <br>Cannabis Weekly</a>
 			</div>
 
 			<div class="third-menu-col ">
 				<a class="white fw3 mb4 f1 db" href="contact#team">Team</a>
 				<a class="white fw3 mb4 f1 db" href="press">Press</a>
 				<a class="white fw3 mb4 f1 db" href="press#sponsorship">Sponsorship</a>
-				<a class="white fw3 mb4 f1 db" href="http://cannabis-europa.com" target="_blank">Cannabis<br>Europa</a>
+				<a class="white fw3 mb4 f1 db flex no-wrap" href="http://cannabis-europa.com" target="_blank">Cannabis<br>Europa
+					<svg class="menu-arrow-icon pl2" viewBox="0 0 6.175 6.283">
+						<defs>
+							<style>
+								.menu-1, .menu-2 {
+									fill: none;
+									stroke: #fff;
+								}
+
+								.menu-2 {
+									stroke-miterlimit: 10;
+									fill-rule: evenodd;
+								}
+							</style>
+						</defs>
+						<g id="Group_457" data-name="Group 457" transform="translate(-212.071 -382.126)">
+							<path id="Path_444" data-name="Path 444" class="menu-1" d="M209.162,388.4l3.537-3.7" transform="translate(3.27 -0.332)"/>
+							<path id="Path_445" data-name="Path 445" class="menu-2" d="M62.1,42.2l2.234,2.234a.11.11,0,0,1,0,.15L62.1,46.819" transform="translate(139.025 398.402) rotate(-45)"/>
+						</g>
+					</svg>
+				</a>
 				<a class="white fw3 f1 db" href="contact">Contact</a>
 			
 			</div>

@@ -179,32 +179,53 @@
 
           <div class="icw-int flex flex-row items-center row-icw">
             <div class="b-i-svg ">
-            <svg class="icw-icon" viewBox="0 0 63.628 63.628">
+            <svg class="icw-icon" viewBox="0 0 58.125 62.071">
               <defs>
                 <style>
-                  .international-white {
+                  .cls-1, .cls-2 {
                     fill: none;
+                  }
+
+                  .cls-1, .cls-2, .cls-3 {
                     stroke: #fff;
                     stroke-miterlimit: 10;
-                    stroke-width: 2px;
+                    stroke-width: 1.4px;
                   }
 
                   .cls-1 {
                     stroke-linecap: round;
                     stroke-linejoin: round;
                   }
+
+                  .cls-3 {
+                    fill: #fff;
+                  }
                 </style>
               </defs>
-              <g id="Group_820" data-name="Group 820" transform="translate(0.5 0.5)">
-                <path id="Path_2335" data-name="Path 2335" class="international-white" d="M62.128,31.314A30.7,30.7,0,0,1,36.348,61.67h0a28.087,28.087,0,0,1-5.034.458c-1.525,0-3.051-.153-4.576-.305a30.857,30.857,0,0,1,0-61.018C28.263.653,29.789.5,31.314.5a28.087,28.087,0,0,1,5.034.458h0A30.7,30.7,0,0,1,62.128,31.314Z" transform="translate(0 0)"/>
-                <path id="Path_2336" data-name="Path 2336" class="international-white" d="M58.713,31.156a30.7,30.7,0,0,1-25.78,30.356h0c-1.525-.305-3.051-.61-4.576-1.068a30.762,30.762,0,0,1,0-58.577h0A24.828,24.828,0,0,1,32.933.8h0A30.7,30.7,0,0,1,58.713,31.156Z" transform="translate(3.415 0.158)"/>
-                <path id="Path_2337" data-name="Path 2337" class="international-white" d="M53.128,31.209A30.78,30.78,0,0,1,31.772,60.5a48.58,48.58,0,0,1-5.034,1.22A30.857,30.857,0,0,1,26.738.7a24.321,24.321,0,0,1,5.034,1.22A30.78,30.78,0,0,1,53.128,31.209Z" transform="translate(0 0.105)"/>
-                <path id="Path_2338" data-name="Path 2338" class="international-white" d="M23.322.6S16,11.431,16,31.414s7.322,30.814,7.322,30.814" transform="translate(8.144 0.053)"/>
-                <path id="Path_2339" data-name="Path 2339" class="international-white" d="M20.8.6s7.322,10.831,7.322,30.814S20.8,62.228,20.8,62.228" transform="translate(10.667 0.053)"/>
-                <path id="Path_2340" data-name="Path 2340" class="international-white" d="M62.228,22.722S51.4,15.4,31.414,15.4.6,22.722.6,22.722" transform="translate(0.053 7.829)"/>
-                <path id="Path_2341" data-name="Path 2341" class="international-white" d="M62.228,20.2S51.4,27.522,31.414,27.522.6,20.2.6,20.2" transform="translate(0.053 10.351)"/>
+              <g id="Group_1600" data-name="Group 1600" transform="translate(0.2 0.2)">
+                <g id="Group_970_1_" transform="translate(1.67 1.092)">
+                  <g id="Group_576_1_" transform="translate(0 0)">
+                    <path id="Path_2282_1_" class="cls-1" d="M56.741,28.42A27.77,27.77,0,0,1,33.459,55.845h0a23.512,23.512,0,0,1-4.538.395,29.263,29.263,0,0,1-4.143-.3A27.843,27.843,0,0,1,24.876.9C26.257.8,27.639.6,29.02.6a23.513,23.513,0,0,1,4.538.395h0A27.746,27.746,0,0,1,56.741,28.42Z" transform="translate(-1.186 -0.6)"/>
+                    <path id="Path_2283_1_" class="cls-1" d="M56.863,28.425A27.77,27.77,0,0,1,33.581,55.851h0c-1.381-.3-2.762-.592-4.143-.987a27.787,27.787,0,0,1,.1-52.877h0A21.054,21.054,0,0,1,33.68,1h0A27.746,27.746,0,0,1,56.863,28.425Z" transform="translate(-1.308 -0.605)"/>
+                    <path id="Path_2284_1_" class="cls-1" d="M48.651,28.424A27.871,27.871,0,0,1,29.414,54.863a33.816,33.816,0,0,1-4.538,1.085A27.834,27.834,0,0,1,24.876.9a23.408,23.408,0,0,1,4.538,1.085A27.871,27.871,0,0,1,48.651,28.424Z" transform="translate(-1.186 -0.604)"/>
+                    <path id="Path_2285_1_" class="cls-2" d="M29.41.8S22.8,10.567,22.8,28.62s6.61,27.82,6.61,27.82" transform="translate(-1.478 -0.603)"/>
+                    <path id="Path_2286_1_" class="cls-2" d="M29.5.8s6.61,9.767,6.61,27.82S29.5,56.44,29.5,56.44" transform="translate(-1.568 -0.603)"/>
+                    <path id="Path_2287_1_" class="cls-2" d="M56.94,28.01S47.173,21.4,29.12,21.4,1.3,28.01,1.3,28.01" transform="translate(-1.188 -0.88)"/>
+                    <path id="Path_2288_1_" class="cls-2" d="M56.94,28.1s-9.767,6.61-27.82,6.61S1.3,28.1,1.3,28.1" transform="translate(-1.188 -0.971)"/>
+                  </g>
+                  <circle id="Ellipse_50_1_" class="cls-3" cx="4.143" cy="4.143" r="4.143" transform="translate(39.573 38.178)"/>
+                  <circle id="Ellipse_51_1_" class="cls-3" cx="4.143" cy="4.143" r="4.143" transform="translate(39.573 9.273)"/>
+                  <circle id="Ellipse_52_1_" class="cls-3" cx="4.143" cy="4.143" r="4.143" transform="translate(8.004 37.29)"/>
+                </g>
+                <path id="Path_2378" data-name="Path 2378" class="cls-1" d="M5.6,7.208A33.586,33.586,0,0,1,14.183.5" transform="translate(-0.069)"/>
+                <path id="Path_2379" data-name="Path 2379" class="cls-1" d="M4,9.174c.493-.592.987-1.282,1.578-1.874" transform="translate(-0.047 -0.092)"/>
+                <path id="Path_2380" data-name="Path 2380" class="cls-1" d="M.5,14.654A22.977,22.977,0,0,1,2.473,11.3" transform="translate(0 -0.146)"/>
+                <path id="Path_2381" data-name="Path 2381" class="cls-1" d="M40.591,60.2A36.1,36.1,0,0,1,32.6,61.976" transform="translate(-0.433 -0.805)"/>
+                <path id="Path_2382" data-name="Path 2382" class="cls-1" d="M48.656,56.1A29.834,29.834,0,0,1,45.4,58.172" transform="translate(-0.605 -0.749)"/>
+                <path id="Path_2383" data-name="Path 2383" class="cls-1" d="M54.5,7.9a25.256,25.256,0,0,1,1.973,2.565" transform="translate(-0.728 -0.1)"/>
               </g>
             </svg>
+
 
             </div>
             <a href="#rof-icw" class="white ">Rest of the World</a>
@@ -273,9 +294,9 @@
             <div class="issue-inner">
               <h6 class="mb2 white"><?php the_time("d | m | Y"); ?></h6>
               <h2 class="white fw5">Issue</h2>
-              <h1 class="h1-big white previous-issue-n"><?php the_title(); ?> </h1>
-              <img class="mv4 icw-icon-big" src="<?php the_field('featured_icon'); ?>">
-              <p class="pr2 white icw-card-t"><?php echo wp_trim_words( get_field('short_description'), 20, '...' ); ?></p>
+              <h1 class="h1-big issue-n white previous-issue-n"><?php the_title(); ?> </h1>
+                <img class="mv2 pv3 icw-icon-big" src="<?php the_field('featured_icon'); ?>">
+              <p class="pr2 white icw-card-t"><?php echo wp_trim_words( get_field('short_description'), 15, '...' ); ?></p>
             </div>
             <div class="pp-chemical-pattern absolute"></div>
         </a>  

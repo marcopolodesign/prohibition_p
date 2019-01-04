@@ -85,8 +85,8 @@
             <div class="issue-inner">
               <h6 class="mb2 white"><?php the_time("d | m | Y"); ?></h6>
               <h2 class="white fw5">Issue</h2>
-              <h1 class="h1-big white previous-issue-n"><?php the_title(); ?> </h1>
-              <img class="mv4 icw-icon-big" src="<?php the_field('featured_icon'); ?>">
+              <h1 class="h1-big issue-n white previous-issue-n"><?php the_title(); ?> </h1>
+                <img class="mv2 pv3 icw-icon-big" src="<?php the_field('featured_icon'); ?>">
               <p class="pr2 white icw-card-t"><?php echo wp_trim_words( get_field('short_description'), 20, '...' ); ?></p>
             </div>
             <div class="pp-chemical-pattern absolute"></div>

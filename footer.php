@@ -29,7 +29,7 @@
 			</div>
 			<div class="flex relative z-2 justify-between">
 				<div class="w-45">
-					<p class="white mb4">The International Cannabis World, served weekly.</p>
+					<p class="white mb4">Our weekly newsletter brings you the most important developments, news and views on the global cannabis industry.</p>
 
 						<p class="white">We will only ever send you 
 						one email per week.</p>
@@ -39,7 +39,7 @@
 
 				<!-- Begin Mailchimp Signup Form -->
 				<div id="mc_embed_signup">
-					<form action="https://prohibitionpartners.us15.list-manage.com/subscribe/post?u=5a2dd9817b07bc76598d3f9ba&amp;id=071b37cd13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<form action="https://prohibitionpartners.us15.list-manage.com/subscribe/post?u=5a2dd9817b07bc76598d3f9ba&amp;id=071b37cd13" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
 							<div id="mc_embed_signup_scroll">
 						
 					<div class="mc-field-group">

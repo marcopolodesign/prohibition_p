@@ -25,12 +25,12 @@
 
 <div class="content-area contact-template pp-dark-blue-bg min-height-100vh flex">
 
-    <div class="starter-div flex justify-between center general-container margin-auto">
+    <div class="starter-div flex justify-between center contact-starter margin-auto w-80">
 
       <div class="form-intro w-30 flex flex-column justify-between">
         <div>
           <h1 class="white">Contact Us</h1>
-          <h2 class="white">Request publications, investment consultancy or any other doubts and our team will get in contact as soon as posible.</h2>
+          <h2 class="white">Request publications, investment consultancy or any further doubts and we will get in contact as soon as possible.</h2>
         </div>
 
         <div>
@@ -67,7 +67,7 @@
 </div>
 
 <div class="offices-locations-container flex">
-  <a class="pp-dark-blue-bg w-50 london-loc cover no-repeat bg-center" href="https://goo.gl/maps/F5pg6L1z1YT2"> 
+  <a class="pp-dark-blue-bg w-50 london-loc cover no-repeat bg-center" href="https://goo.gl/maps/F5pg6L1z1YT2" target="_blank"> 
     <div class="london-office pa6 flex margin-auto">
       <div class="london-off tc margin-auto">
         <p class="white mb4"><span class="fw5">London<br></span>
@@ -77,7 +77,7 @@
     </div>
   </a> 
 
-   <a class="w-50  bcn-loc cover no-repeat bg-center" href="https://goo.gl/maps/e1uruY5nDL82"> 
+   <a class="w-50  bcn-loc cover no-repeat bg-center" href="https://goo.gl/maps/e1uruY5nDL82" target="_blank"> 
     <div class="bcn-office pa6 flex margin-auto">
       <div class="bcn-off tc margin-auto">
           <p class="white mb4"><span class="fw5">Barcelona<br></span>Carrer d'Estruc 9, 08002,<br>
@@ -110,7 +110,7 @@
                     
                   <div class="team-photo mb3 cover no-repeat bg-center pp-corners" style="<?php image_background('header_bg_image'); ?>)">
                   </div>
-                  <h2 class="pp-blue fw5"><?php the_title(); ?></h2>
+                  <h2 class="pp-dark-blue fw3"><?php the_title(); ?></h2>
                   <p width="69" class="pp-grey mb2 pb2"><?php the_field('pp_header_text'); ?></p>
                   <div class="flex flex-row no-wrap items-center ">
                     <!-- social icons here -->
@@ -163,7 +163,7 @@
                     <?php endif; ?>
 
                     <?php if ( get_field('linkedin_adress') ): ?>
-                      <a href="<?php the_field('linkedin_adress'); ?>">
+                      <a href="<?php the_field('linkedin_adress'); ?>" target="_blank">
                       <svg class="social-icon" viewBox="0 0 17.336 17.287">
                         <defs>
                           <style>

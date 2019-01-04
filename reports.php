@@ -2,39 +2,18 @@
 
 <?php get_header();?>
 
-<div class="w-100 cover no-repeat bg-center relative" style="background-color:<?php the_field('header_bg_color'); ?>; <?php image_background('header_bg_image'); ?>">
-    <div class="starter-div flex flex-column wrap center justify-center measure-wide lh-copy relative z-5 mobile-padding" >
+<div class="w-100 cover no-repeat bg-center relative bg-att-fixed" style="background-color:<?php the_field('header_bg_color'); ?>; <?php image_background('header_bg_image'); ?>">
+    <div class="starter-div flex flex-column wrap center justify-center measure-wide lh-copy relative z-5 mobile-padding pb4" >
 
       <h1 class="white"><?php the_title(); ?></h1>
       <h2 class="white"><?php the_field('pp_header_text'); ?></h2>
 
-      <div class="flex flex-row no-wrap mt5 ">
-        <a href="contact" class="fw5 third-cta white mr2 platform">Request Publication</a>
-          <svg class="arrow-icon white-arrow" viewBox="0 0 6.175 6.283">
-              <defs>
-                <style>
-                  .cls-1, .cls-2 {
-                    fill: none;
-                    stroke: #1fa5ff;
-                  }
-
-                  .cls-2 {
-                    stroke-miterlimit: 10;
-                    fill-rule: evenodd;
-                  }
-                </style>
-              </defs>
-              <g id="Group_457" data-name="Group 457" transform="translate(-212.071 -382.126)">
-                <path id="Path_444" data-name="Path 444" class="cls-1" d="M209.162,388.4l3.537-3.7" transform="translate(3.27 -0.332)"/>
-                <path id="Path_445" data-name="Path 445" class="cls-2" d="M62.1,42.2l2.234,2.234a.11.11,0,0,1,0,.15L62.1,46.819" transform="translate(139.025 398.402) rotate(-45)"/>
-              </g>
-          </svg>
-      </div>
+    
 
     </div>
 </div>
 
-<div class="starter-div flex">
+<div class="starter-div reports-starter flex">
 
 
 <?php
@@ -90,7 +69,7 @@
                   <p class="white mb4">Please specify in the form below the mail to receive this report.</p>
 
                   <div class="form-container reports-form ">
-                  <form action="<?php the_field('form_action'); ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <form action="<?php the_field('form_action'); ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"  novalidate>
 						        <div id="mc_embed_signup_scroll">
                         <div class="mc-field-group">
                           <input class="fw3 pb2 pa3 pl0 white mb3" type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name...">
@@ -120,7 +99,7 @@
                 </p>
               </div>
               <div>
-                <p class="mb2 pp-blue ttu fw5">OUR INVESTOR BASICS REPORTS EXAMINES:</p>
+                <p class="mb2 pp-blue ttu fw5"><?php the_title(); ?> EXAMINES</p>
                 <p class="pp-grey"><?php the_field('report_bullets'); ?>
                 </p>
               </div>
@@ -143,8 +122,8 @@
 <?php
       $argsNew = array(
           'post_type' => 'post',
-          
           'category_name' => 'Report',
+          'category__not_in' => 'Featured Report',
           'orderby' => 'date',
           'offset' => 1,
           'post__not_in' => array( $post->ID ),
@@ -198,7 +177,7 @@
                   <p class="white mb4">Please specify in the form below the mail to receive this report.</p>
 
                   <div class="form-container reports-form ">
-                    <form action="<?php the_field('form_action'); ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="<?php the_field('form_action'); ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"  novalidate>
                         <div id="mc_embed_signup_scroll">
                             <div class="mc-field-group">
                               <input class="fw3 pb2 pa3 pl0 white mb3" type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name...">
@@ -230,8 +209,10 @@
               </p>
             </div>
             <div>
-              <p class="mb2 pp-blue ttu fw5">OUR INVESTOR BASICS REPORTS EXAMINES:</p>
+            <?php if (get_field('report_bullets')): ?>
+              <p class="mb2 pp-blue ttu fw5"><?php the_title(); ?> EXAMINES</p>
               <p class="pp-grey"><?php the_field('report_bullets'); ?>
+               <?php endif; ?>
               </p>
             </div>
 
@@ -241,7 +222,7 @@
         </div>
             
   
-  <?php  } }?>
+      <?php   } }?>
 </div>
 
 

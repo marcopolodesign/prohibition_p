@@ -66,16 +66,18 @@
         $post_query->the_post(); ?>
 
           
-            <a class="masonry-child overflow-hidden pp-corners pp-shadow pp-shadow-nohover" href="<?php the_permalink(); ?>">
+            <a class="masonry-child overflow-hidden" href="<?php the_permalink(); ?>">
                 
               
-              <div class="review-inner-img cover no-repeat bg-center pp-corners-image <?php the_field("icr_height"); ?>" style="background-image: url(<?php the_field ('header_bg_image'); ?>)"></div>
-              <div class="flex flex-row justify-between items-start pa4">
+              <div class="review-inner-img-container overflow-hidden">
+                <div class="review-inner-img cover no-repeat bg-center<?php the_field("icr_height"); ?>" style="background-image: url(<?php the_field ('header_bg_image'); ?>)"></div>
+              </div>
+              <div class="flex flex-row justify-between items-start pt3">
                   <div class="review-inner-title ">
-                    <p class="pp-blue mb2 fw5 cr-nf-title w-70 cr-title"><?php the_title(); ?></p>
+                    <p class="pp-blue mb2 fw5 cr-title"><?php the_title(); ?></p>
                     <p class="pp-grey"><?php echo wp_trim_words( get_field('pp_header_text'), 30, '...' ); ?></p>
                   </div>
-                  <div class="review-arrow ">
+                  <!-- <div class="review-arrow ">
                     <svg class="arrow-icon" viewBox="0 0 6.175 6.283">
                       <defs>
                         <style>
@@ -95,7 +97,7 @@
                         <path id="Path_445" data-name="Path 445" class="cls-2" d="M62.1,42.2l2.234,2.234a.11.11,0,0,1,0,.15L62.1,46.819" transform="translate(139.025 398.402) rotate(-45)"/>
                       </g>
                     </svg>
-                  </div>
+                  </div> -->
               </div>
             </a>
           

@@ -129,7 +129,7 @@
             Barcelona, Spain</p>
 					</div>
 			
-					<p class="white mb4"><a href="#" class="white">info@prohibitionpartners.com</a><br>+44 20 7409 5042</p>
+					<p class="white mb4"><a href="mailto:info@prohibitionpartners.com" class="white">info@prohibitionpartners.com</a><br>+44 20 7409 5042</p>
 						<div class="footer-social flex justify-between w-80">
 								<a href="http://twitter.com/prohibition_p" class="footer-social-icon di mr2"href="/"><img src="/wp-content/uploads/2018/11/Twitter_IconOnly_Black.svg"></a>
 								<a href="https://www.instagram.com/prohibitionpartners"  class="footer-social-icon di mr2"href="/"><img src="/wp-content/uploads/2018/11/instagram_icon_inline.svg"></a>
@@ -140,16 +140,16 @@
 		
 			<div class="second-menu-col ">
 				<a class="white fw3 mb4 f1 db" href="/">Home</a>
-				<a class="white fw3 mb4 f1 db" href="reports">Reports</a>
-				<a class="white fw3 mb4 f1 db" href="services">Services</a>
-				<a class="white fw3 mb4 f1 db" href="international-country-review">International <br>Country Review</a>
-				<a class="white fw3  f1 db" href="international-cannabis-weekly">International <br>Cannabis Weekly</a>
+				<a class="white fw3 mb4 f1 db" href="/reports">Reports</a>
+				<a class="white fw3 mb4 f1 db" href="/services">Services</a>
+				<a class="white fw3 mb4 f1 db" href="/news-insight">News + Insight</a>
+				<a class="white fw3  f1 db" href="/international-cannabis-weekly">International <br>Cannabis Weekly</a>
 			</div>
 
 			<div class="third-menu-col ">
-				<a class="white fw3 mb4 f1 db" href="contact#team">Team</a>
-				<a class="white fw3 mb4 f1 db" href="press">Press</a>
-				<a class="white fw3 mb4 f1 db" href="press#sponsorship">Sponsorship</a>
+				<a class="white fw3 mb4 f1 db" href="/about#team">Team</a>
+				<a class="white fw3 mb4 f1 db" href="/press">Press</a>
+				<a class="white fw3 mb4 f1 db" href="/sponsorship">Sponsorship</a>
 				<a class="white fw3 mb4 f1 db flex no-wrap" href="http://cannabis-europa.com" target="_blank">Cannabis<br>Europa
 					<svg class="menu-arrow-icon pl2" viewBox="0 0 6.175 6.283">
 						<defs>
@@ -171,7 +171,7 @@
 						</g>
 					</svg>
 				</a>
-				<a class="white fw3 f1 db" href="contact">Contact</a>
+				<a class="white fw3 f1 db" href="/contact">Contact</a>
 			
 			</div>
 

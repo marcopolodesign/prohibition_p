@@ -1,4 +1,4 @@
-jQuery(function ($) {
+jQuery(function($) {
   const header = document.querySelector('header');
 
   let currentSlide = 0;
@@ -15,20 +15,18 @@ jQuery(function ($) {
   }
 
   function readMoreHover() {
-
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
       const readMore = document.querySelectorAll('.read-more-featured-slider');
 
       readMore.forEach(readM => {
-
-        $(readMore).on('mouseover', () => {
-            $('.time-bar-slider').css('background-color', '#6f9ab7')
+        $(readMore)
+          .on('mouseover', () => {
+            $('.time-bar-slider').css('background-color', '#6f9ab7');
           })
           .on('mouseout', () => {
-            $('.time-bar-slider').css('background-color', '')
+            $('.time-bar-slider').css('background-color', '');
           });
-
-      })
+      });
     }
   }
 
@@ -64,16 +62,21 @@ jQuery(function ($) {
     $(slides[currentSlide]).addClass('open');
     $(slides[currentSlide]).css('width', '100%');
     $(slides[currentSlide]).css('z-index', z);
-
   }
 
   function logoColor() {
     $(document).on('ready', () => {
-      if ((/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) && $('body').is('.home')) {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) &&
+        $('body').is('.home')
+      ) {
         $('.menu-trigger-color').addClass('');
       } else if ($('body').is('.home')) {
         $('.menu-trigger-color').addClass('white-stroke');
-      } else if ((/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) && $('body').is('.post-template-icw-single,.post-template-icw-single-old')) {
+      } else if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) &&
+        $('body').is('.post-template-icw-single,.post-template-icw-single-old')
+      ) {
         $('.menu-trigger-color').addClass('white-stroke');
         $('.cls-3-grey').addClass('white-logo');
         $('.cls-2-blue').addClass('white-logo');
@@ -83,7 +86,7 @@ jQuery(function ($) {
         $('.cls-2-blue').addClass('white-logo');
       } else if (
         $('body').is(
-          '.post-template-icw-single, .post-template-icr-single, .page-template-icw, .page-template-services, .page-template-contact, .post-template-icw-single-old, .page-template-icr, .page-template-reports '
+          '.post-template-icw-single, .post-template-news-insight-single, .page-template-icw, .page-template-services, .page-template-contact, .post-template-icw-single-old, .page-template-news-insights, .page-template-reports, .page-template-sponsorship, .page-template-about-php, .page-template-press-sponsorship'
         )
       ) {
         $('.cls-3-grey').addClass('white-logo');
@@ -115,11 +118,10 @@ jQuery(function ($) {
           $(header).removeClass('bg-white');
         }
 
-        if (initialScroll == 0) {}
+        if (initialScroll == 0) {
+        }
 
         if (initialScroll > 80) {
-
-
           $(header).addClass('bg-white');
           $('.cls-3-grey').addClass('og-logo');
           $('.cls-2-blue').addClass('og-logo-grey');
@@ -130,12 +132,18 @@ jQuery(function ($) {
 
         if (initialScroll < 100) {
           if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-
-          } else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) && $('body').is('.post-template-icw-single,.post-template-icw-single-old')) {
+          } else if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) &&
+            $('body').is('.post-template-icw-single,.post-template-icw-single-old')
+          ) {
             $('.menu-trigger-color').addClass('white-stroke');
             $('.cls-3-grey').addClass('white-logo');
             $('.cls-2-blue').addClass('white-logo');
-          } else if ($('body').is('.post-template-icw-single, .post-template-icr-single, .page-template-icw, .page-template-services, .page-template-contact, .post-template-icw-single-old, .page-template-icr, .home')) {
+          } else if (
+            $('body').is(
+              '.post-template-icw-single, .post-template-news-insight-single, .page-template-icw, .page-template-services, .page-template-contact, .post-template-icw-single-old, .page-template-news-insight, .home, .page-template-sponsorship, .page-template-about'
+            )
+          ) {
             $('.menu-trigger-color').addClass('white-stroke');
           }
 
@@ -179,7 +187,7 @@ jQuery(function ($) {
       }
 
       menuLinks.forEach((menuLinks, index) => {
-        const delay = index * 15;
+        const delay = index * 30;
         menuLinks.style.transitionDelay = delay + 550 + 'ms';
       });
       $(menuLinks).toggleClass('translate-up');
@@ -197,7 +205,7 @@ jQuery(function ($) {
     const bodyTag = document.querySelector('body');
     const progressBarWidth = document.querySelector('div.progress');
 
-    document.addEventListener('scroll', function () {
+    document.addEventListener('scroll', function() {
       const pixels = window.pageYOffset;
       const pageHeight = bodyTag.getBoundingClientRect().height;
       const totalScrollableDistance = pageHeight - window.innerHeight;
@@ -320,12 +328,11 @@ jQuery(function ($) {
         });
       });
 
-    const dataRowLatam = document.querySelectorAll('.latam-numbers .data-row')
-    const dataRowEurope = document.querySelectorAll('.europe-numbers .data-row')
+    const dataRowLatam = document.querySelectorAll('.latam-numbers .data-row');
+    const dataRowEurope = document.querySelectorAll('.europe-numbers .data-row');
     const dataRowOceania = document.querySelectorAll('.oceania-numbers .data-row');
-    const dataRowAsia = document.querySelectorAll('.asia-numbers .data-row')
-    const dataRowNorthA = document.querySelectorAll('.north-america-numbers .data-row')
-
+    const dataRowAsia = document.querySelectorAll('.asia-numbers .data-row');
+    const dataRowNorthA = document.querySelectorAll('.north-america-numbers .data-row');
 
     dataRowLatam.forEach((dataRowL, index) => {
       const delay = index * 15;
@@ -352,50 +359,46 @@ jQuery(function ($) {
       dataRowNA.style.transitionDelay = delay + 500 + 'ms';
     });
 
-
-
     $('#latam-path, #latam-box').on('click', () => {
       $(overlayMap).css('transform', 'scaleY(1)');
       $(overlayMapContainer).addClass('z-top');
       $(overlayMap).addClass('z-top');
       $(overlayMap).css('min-height', '100vh');
 
-
       $('header').css('transform', 'translateY(-100%');
 
-      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)')
-      $('.cw-image svg path').css('z-index', '99999999')
-      $('.overlay-map-top-container').css('z-index', '-1')
+      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)');
+      $('.cw-image svg path').css('z-index', '99999999');
+      $('.overlay-map-top-container').css('z-index', '-1');
       // $('#latam-path').css('fill', 'rgba(255, 255, 255, 0)');
 
-
       $('.data-row').removeClass('row-open');
-      $('.latam-numbers .data-row').addClass('row-open')
+      $('.latam-numbers .data-row').addClass('row-open');
 
       $('.gross-1, .gross-2, .gross-3').removeClass('open');
-      $('.latam-gross>div').addClass('open')
+      $('.latam-gross>div').addClass('open');
       $('.overlay-map-top-container').css('height', 'unset');
-      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial')
-
+      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial');
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         // $(latam).css('fill', '#fff0');
-        $(overlayMap).css('transform', 'scaleY(1)');;
+        $(overlayMap).css('transform', 'scaleY(1)');
 
-        $('html, body').animate({
-            scrollTop: $(".overlay-map-top-container").offset().top
+        $('html, body').animate(
+          {
+            scrollTop: $('.overlay-map-top-container').offset().top
           },
           350
         );
       } else {
         // $(latam).css('fill', '#fff');
         $(latam).css('z-index', '999999');
-        $('html, body').animate({
+        $('html, body').animate(
+          {
             scrollTop: $(overlayMapContainer).offset().top
           },
           350
         );
-
       }
 
       $('.europe-path-class').css('fill', 'rgba(255, 255, 255, 0)');
@@ -435,30 +438,30 @@ jQuery(function ($) {
       $('header').css('transform', 'translateY(-100%');
       $(overlayMap).css('min-height', '100vh');
 
-      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)')
-      $('.cw-image svg path').css('z-index', '99999999')
-      $('.overlay-map-top-container').css('z-index', '-1')
+      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)');
+      $('.cw-image svg path').css('z-index', '99999999');
+      $('.overlay-map-top-container').css('z-index', '-1');
 
       $('.data-row').removeClass('row-open');
-      $('.europe-numbers .data-row').addClass('row-open')
+      $('.europe-numbers .data-row').addClass('row-open');
 
       $('.overlay-map-top-container').css('height', 'unset');
-      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial')
+      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial');
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('.europe-path-class').css('fill', 'rgba(255, 255, 255, 0)');
         $(overlayMap).css('transform', 'scaleY(1)');
 
-
-
-        $('html, body').animate({
-            scrollTop: $(".overlay-map-top-container").offset().top
+        $('html, body').animate(
+          {
+            scrollTop: $('.overlay-map-top-container').offset().top
           },
           350
         );
       } else {
         // $('#europe-map path').css('fill', '#fff');
-        $('html, body').animate({
+        $('html, body').animate(
+          {
             scrollTop: $(overlayMapContainer).offset().top
           },
           350
@@ -492,7 +495,7 @@ jQuery(function ($) {
       $(overlayMap).addClass('is-open');
 
       $('.gross-1, .gross-2, .gross-3').removeClass('open');
-      $('.europe-gross>div').addClass('open')
+      $('.europe-gross>div').addClass('open');
 
       //Hide map tags
       // $('.oceania-selector, .latam-selector, .europe-selector').css('opacity', '0');
@@ -505,36 +508,34 @@ jQuery(function ($) {
       $('header').css('transform', 'translateY(-100%');
       $(overlayMap).css('min-height', '100vh');
 
-      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)')
-      $('.cw-image svg path').css('z-index', '99999999')
-      $('.overlay-map-top-container').css('z-index', '-1')
-
-
+      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)');
+      $('.cw-image svg path').css('z-index', '99999999');
+      $('.overlay-map-top-container').css('z-index', '-1');
 
       $('.data-row').removeClass('row-open');
-      $('.oceania-numbers .data-row').addClass('row-open')
+      $('.oceania-numbers .data-row').addClass('row-open');
 
       $('.overlay-map-top-container').css('height', 'unset');
-      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial')
+      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial');
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        $("#oceania-path path").css('fill', 'rgba(255, 255, 255, 0)');
+        $('#oceania-path path').css('fill', 'rgba(255, 255, 255, 0)');
 
-        $('html, body').animate({
-            scrollTop: $(".overlay-map-top-container").offset().top
+        $('html, body').animate(
+          {
+            scrollTop: $('.overlay-map-top-container').offset().top
           },
           350
         );
       } else {
         // $("#oceania-path path").css('fill', '#fff');
-        $('html, body').animate({
+        $('html, body').animate(
+          {
             scrollTop: $(overlayMapContainer).offset().top
           },
           350
         );
       }
-
-
 
       $(latam).css('fill', 'rgba(255, 255, 255, 0)');
       $('.europe-path-class').css('fill', 'rgba(255, 255, 255, 0)');
@@ -563,7 +564,7 @@ jQuery(function ($) {
       $(overlayMap).addClass('is-open');
 
       $('.gross-1, .gross-2, .gross-3').removeClass('open');
-      $('.oceania-gross>div').addClass('open')
+      $('.oceania-gross>div').addClass('open');
 
       //Hide map tags
       // $('.oceania-selector, .latam-selector, .europe-selector').css('opacity', '0');
@@ -576,29 +577,30 @@ jQuery(function ($) {
       $('header').css('transform', 'translateY(-100%');
       $(overlayMap).css('min-height', '100vh');
 
-      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)')
-      $('.cw-image svg path').css('z-index', '99999999')
-      $('.overlay-map-top-container').css('z-index', '-1')
+      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)');
+      $('.cw-image svg path').css('z-index', '99999999');
+      $('.overlay-map-top-container').css('z-index', '-1');
 
       $('.data-row').removeClass('row-open');
-      $('.asia-numbers .data-row').addClass('row-open')
+      $('.asia-numbers .data-row').addClass('row-open');
 
       $('.overlay-map-top-container').css('height', 'unset');
-      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial')
+      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial');
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('#asia-path').css('fill', 'rgba(255, 255, 255, 0)');
         $(overlayMap).css('transform', 'scaleY(1)');
 
-
-        $('html, body').animate({
-            scrollTop: $(".overlay-map-top-container").offset().top
+        $('html, body').animate(
+          {
+            scrollTop: $('.overlay-map-top-container').offset().top
           },
           350
         );
       } else {
         // $('#asia-path').css('fill', '#fff');
-        $('html, body').animate({
+        $('html, body').animate(
+          {
             scrollTop: $(overlayMapContainer).offset().top
           },
           350
@@ -629,9 +631,7 @@ jQuery(function ($) {
       $(overlayMap).addClass('is-open');
 
       $('.gross-1, .gross-2, .gross-3').removeClass('open');
-      $('.asia-gross>div').addClass('open')
-
-
+      $('.asia-gross>div').addClass('open');
     });
 
     $('#africa-path, #africa-box').on('click', () => {
@@ -641,26 +641,28 @@ jQuery(function ($) {
       $('header').css('transform', 'translateY(-100%');
       $(overlayMap).css('min-height', '100vh');
 
-      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)')
-      $('.cw-image svg path').css('z-index', '99999999')
-      $('.overlay-map-top-container').css('z-index', '-1')
+      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)');
+      $('.cw-image svg path').css('z-index', '99999999');
+      $('.overlay-map-top-container').css('z-index', '-1');
 
       $('.data-row').removeClass('row-open');
-      $('.africa-numbers .data-row').addClass('row-open')
+      $('.africa-numbers .data-row').addClass('row-open');
       $('.overlay-map-top-container').css('height', 'unset');
-      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial')
+      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial');
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('#africa-path').css('fill', 'rgba(255, 255, 255, 0)');
 
-        $('html, body').animate({
-            scrollTop: $(".overlay-map-top-container").offset().top
+        $('html, body').animate(
+          {
+            scrollTop: $('.overlay-map-top-container').offset().top
           },
           350
         );
       } else {
         // $('#africa-path').css('fill', '#fff');
-        $('html, body').animate({
+        $('html, body').animate(
+          {
             scrollTop: $(overlayMapContainer).offset().top
           },
           350
@@ -691,9 +693,7 @@ jQuery(function ($) {
       $(overlayMap).addClass('is-open');
 
       $('.gross-1, .gross-2, .gross-3').removeClass('open');
-      $('.africa-gross>div').addClass('open')
-
-
+      $('.africa-gross>div').addClass('open');
     });
 
     $('#north-america-path, #north-america-box').on('click', () => {
@@ -703,27 +703,29 @@ jQuery(function ($) {
       $('header').css('transform', 'translateY(-100%');
       $(overlayMap).css('min-height', '100vh');
 
-      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)')
-      $('.cw-image svg path').css('z-index', '99999999')
-      $('.overlay-map-top-container').css('z-index', '-1')
+      $('.cw-image svg path').css('fill', 'rgba(255, 255, 255, 0)');
+      $('.cw-image svg path').css('z-index', '99999999');
+      $('.overlay-map-top-container').css('z-index', '-1');
 
       $('.data-row').removeClass('row-open');
-      $('.north-america-numbers .data-row').addClass('row-open')
+      $('.north-america-numbers .data-row').addClass('row-open');
       $('.overlay-map-top-container').css('height', 'unset');
-      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial')
+      $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial');
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('#north-america-path path').css('fill', 'rgba(255, 255, 255, 0)');
         $('.overlay-map-top-container').css('height', 'unset');
-        $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial')
-        $('html, body').animate({
-            scrollTop: $(".overlay-map-top-container").offset().top
+        $('.overlay-map-top-container, .overlay-map').css('overflow', 'initial');
+        $('html, body').animate(
+          {
+            scrollTop: $('.overlay-map-top-container').offset().top
           },
           350
         );
       } else {
         // $('#north-america-path path').css('fill', '#fff');
-        $('html, body').animate({
+        $('html, body').animate(
+          {
             scrollTop: $(overlayMapContainer).offset().top
           },
           350
@@ -754,12 +756,8 @@ jQuery(function ($) {
       $(overlayMap).addClass('is-open');
 
       $('.gross-1, .gross-2, .gross-3').removeClass('open');
-      $('.north-america-gross>div').addClass('open')
-
-
+      $('.north-america-gross>div').addClass('open');
     });
-
-
 
     $('.close-map').on('click', () => {
       $('.overlay-map-container, .overlay-map, .overlay-map-top-container').css(
@@ -770,10 +768,9 @@ jQuery(function ($) {
       $(overlayMap).removeClass('z-top');
       $('header').css('transform', '');
 
-      $('.cw-image svg path').css('fill', '')
-      $('.cw-image svg path').css('z-index', '')
-      $('.overlay-map-top-container').css('z-index', '')
-
+      $('.cw-image svg path').css('fill', '');
+      $('.cw-image svg path').css('z-index', '');
+      $('.overlay-map-top-container').css('z-index', '');
 
       $('.cw-image').css('pointer-events', '');
 
@@ -796,11 +793,12 @@ jQuery(function ($) {
       $('.data-row').removeClass('row-open');
       $('.gross-1, .gross-2, .gross-3').removeClass('open');
       $('.overlay-map-top-container').css('height', '');
-      $('.overlay-map-top-container, .overlay-map').css('overflow', '')
+      $('.overlay-map-top-container, .overlay-map').css('overflow', '');
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        $('html, body').animate({
-            scrollTop: $(".overlay-map-top-container").offset().top - 200
+        $('html, body').animate(
+          {
+            scrollTop: $('.overlay-map-top-container').offset().top - 200
           },
           350
         );
@@ -810,7 +808,7 @@ jQuery(function ($) {
       // $('.oceania-selector, .latam-selector, .europe-selector').css('opacity', '');
     });
 
-    document.addEventListener("keyup", function (event) {
+    document.addEventListener('keyup', function(event) {
       if (event.keyCode === 27) {
         $('.overlay-map-container, .overlay-map, .overlay-map-top-container').css(
           'pointer-events',
@@ -820,10 +818,9 @@ jQuery(function ($) {
         $(overlayMap).removeClass('z-top');
         $('header').css('transform', '');
 
-        $('.cw-image svg path').css('fill', '')
-        $('.cw-image svg path').css('z-index', '')
-        $('.overlay-map-top-container').css('z-index', '')
-
+        $('.cw-image svg path').css('fill', '');
+        $('.cw-image svg path').css('z-index', '');
+        $('.overlay-map-top-container').css('z-index', '');
 
         $('.cw-image').css('pointer-events', '');
 
@@ -846,11 +843,12 @@ jQuery(function ($) {
         $('.data-row').removeClass('row-open');
         $('.gross-1, .gross-2, .gross-3').removeClass('open');
         $('.overlay-map-top-container').css('height', '');
-        $('.overlay-map-top-container, .overlay-map').css('overflow', '')
+        $('.overlay-map-top-container, .overlay-map').css('overflow', '');
 
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-          $('html, body').animate({
-              scrollTop: $(".overlay-map-top-container").offset().top - 200
+          $('html, body').animate(
+            {
+              scrollTop: $('.overlay-map-top-container').offset().top - 200
             },
             350
           );
@@ -858,13 +856,10 @@ jQuery(function ($) {
       }
     });
 
-
-
     // Function to close if user scrolls past map or to top of page
     document.addEventListener('scroll', () => {
       const pageTop = window.pageYOffset;
       const mapEnd = 2500;
-
 
       if (pageTop == 0) {
         $('.overlay-map-container, .overlay-map, .overlay-map-top-container').css(
@@ -875,10 +870,9 @@ jQuery(function ($) {
         $(overlayMap).removeClass('z-top');
         $('header').css('transform', '');
 
-        $('.cw-image svg path').css('fill', '')
-        $('.cw-image svg path').css('z-index', '')
-        $('.overlay-map-top-container').css('z-index', '')
-
+        $('.cw-image svg path').css('fill', '');
+        $('.cw-image svg path').css('z-index', '');
+        $('.overlay-map-top-container').css('z-index', '');
 
         $('.cw-image').css('pointer-events', '');
 
@@ -900,15 +894,12 @@ jQuery(function ($) {
 
         $('.data-row').removeClass('row-open');
         $('.gross-1, .gross-2, .gross-3').removeClass('open');
-
       }
-      console.log(mapEnd)
-      console.log(pageTop)
+      console.log(mapEnd);
+      console.log(pageTop);
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         if (mapEnd < pageTop) {
-
-
           $('.overlay-map-container, .overlay-map, .overlay-map-top-container').css(
             'pointer-events',
             ''
@@ -917,10 +908,9 @@ jQuery(function ($) {
           $(overlayMap).removeClass('z-top');
           $('header').css('transform', '');
 
-          $('.cw-image svg path').css('fill', '')
-          $('.cw-image svg path').css('z-index', '')
-          $('.overlay-map-top-container').css('z-index', '')
-
+          $('.cw-image svg path').css('fill', '');
+          $('.cw-image svg path').css('z-index', '');
+          $('.overlay-map-top-container').css('z-index', '');
 
           $('.cw-image').css('pointer-events', '');
 
@@ -943,9 +933,8 @@ jQuery(function ($) {
           $('.data-row').removeClass('row-open');
           $('.gross-1, .gross-2, .gross-3').removeClass('open');
           $('.overlay-map-top-container').css('height', '');
-          $('.overlay-map-top-container, .overlay-map').css('overflow', '')
+          $('.overlay-map-top-container, .overlay-map').css('overflow', '');
         }
-
       } else if (document.querySelector('.continents-container').offsetTop < pageTop) {
         $('.overlay-map-container, .overlay-map, .overlay-map-top-container').css(
           'pointer-events',
@@ -955,10 +944,9 @@ jQuery(function ($) {
         $(overlayMap).removeClass('z-top');
         $('header').css('transform', '');
 
-        $('.cw-image svg path').css('fill', '')
-        $('.cw-image svg path').css('z-index', '')
-        $('.overlay-map-top-container').css('z-index', '')
-
+        $('.cw-image svg path').css('fill', '');
+        $('.cw-image svg path').css('z-index', '');
+        $('.overlay-map-top-container').css('z-index', '');
 
         $('.cw-image').css('pointer-events', '');
 
@@ -981,17 +969,17 @@ jQuery(function ($) {
         $('.data-row').removeClass('row-open');
         $('.gross-1, .gross-2, .gross-3').removeClass('open');
         $('.overlay-map-top-container').css('height', '');
-        $('.overlay-map-top-container, .overlay-map').css('overflow', '')
+        $('.overlay-map-top-container, .overlay-map').css('overflow', '');
       }
-    })
-
+    });
   }
 
   function anchors() {
     const anchorsICW = document.querySelectorAll('.icw-theme');
 
-    $('.europe-icw').on('click', function () {
-      $('html, body').animate({
+    $('.europe-icw').on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(anchorsICW[0]).offset().top - 100
         },
         500
@@ -999,8 +987,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $('.latam-icw').on('click', function () {
-      $('html, body').animate({
+    $('.latam-icw').on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(anchorsICW[1]).offset().top - 100
         },
         750
@@ -1008,8 +997,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $('.oceania-icw').on('click', function () {
-      $('html, body').animate({
+    $('.oceania-icw').on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(anchorsICW[2]).offset().top - 100
         },
         1000
@@ -1017,8 +1007,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $('.row-icw').on('click', function () {
-      $('html, body').animate({
+    $('.row-icw').on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(anchorsICW[3]).offset().top - 100
         },
         1250
@@ -1029,8 +1020,9 @@ jQuery(function ($) {
     const servicesAnchors = document.querySelectorAll('.services-icons a');
     const servicesDivs = document.querySelectorAll('.services-content > div');
 
-    $(servicesAnchors[0]).on('click', function () {
-      $('html, body').animate({
+    $(servicesAnchors[0]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(servicesDivs[0]).offset().top
         },
         500
@@ -1038,8 +1030,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(servicesAnchors[1]).on('click', function () {
-      $('html, body').animate({
+    $(servicesAnchors[1]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(servicesDivs[1]).offset().top
         },
         750
@@ -1047,8 +1040,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(servicesAnchors[2]).on('click', function () {
-      $('html, body').animate({
+    $(servicesAnchors[2]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(servicesDivs[2]).offset().top
         },
         1000
@@ -1059,8 +1053,9 @@ jQuery(function ($) {
     const homeAnchors = document.querySelectorAll('.sections-index a');
     const sections = document.querySelectorAll('.sections-inner > div ');
 
-    $(homeAnchors[0]).on('click', function () {
-      $('html, body').animate({
+    $(homeAnchors[0]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[0]).offset().top - 100
         },
         700
@@ -1068,8 +1063,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(homeAnchors[1]).on('click', function () {
-      $('html, body').animate({
+    $(homeAnchors[1]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[1]).offset().top - 100
         },
         700
@@ -1077,8 +1073,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(homeAnchors[2]).on('click', function () {
-      $('html, body').animate({
+    $(homeAnchors[2]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[2]).offset().top - 100
         },
         700
@@ -1086,8 +1083,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(homeAnchors[3]).on('click', function () {
-      $('html, body').animate({
+    $(homeAnchors[3]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[3]).offset().top - 100
         },
         700
@@ -1095,8 +1093,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(homeAnchors[4]).on('click', function () {
-      $('html, body').animate({
+    $(homeAnchors[4]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[4]).offset().top - 100
         },
         700
@@ -1104,8 +1103,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(homeAnchors[5]).on('click', function () {
-      $('html, body').animate({
+    $(homeAnchors[5]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[5]).offset().top - 90
         },
         700
@@ -1113,8 +1113,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $(homeAnchors[6]).on('click', function () {
-      $('html, body').animate({
+    $(homeAnchors[6]).on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[6]).offset().top - 90
         },
         700
@@ -1122,8 +1123,9 @@ jQuery(function ($) {
       return false;
     });
 
-    $('#about-home-anchor').on('click', function () {
-      $('html, body').animate({
+    $('#about-home-anchor').on('click', function() {
+      $('html, body').animate(
+        {
           scrollTop: $(sections[0]).offset().top - 90
         },
         700
@@ -1133,52 +1135,52 @@ jQuery(function ($) {
   }
 
   function footerMobileLinks() {
-    $(window).resize(function () {
+    $(window).resize(function() {
       if ($('.third-footer-links').css('display') == 'none') {
         $('.first-footer-links').html(
-          '	<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">International Cannabis Weekly</a><a href="contact#team">International Country Review</a><a href="services">Our Services</a><a href="contact#team">Press</a><a href="contact#team">Sponsorship</a><a href="contact#team">Contact</a>'
+          '	<a href="/">Home</a><a href="/about">About Us</a><a href="reports">Reports</a><a href="international-cannabis-weekly">International Cannabis Weekly</a><a href="news-insights">News + Insight</a><a href="services">Our Services</a><a href="press">Press</a><a href="/sponsorship">Sponsorship</a><a href="contact">Contact</a>'
         );
       } else {
         $('.first-footer-links').html(
-          '		<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">The Team</a><a href="services">Our Services</a>'
+          '		<a href="/">Home</a><a href="/about">About Us</a><a href="/reports">Reports</a><a href="/aboout#team">The Team</a><a href="/services">Our Services</a>'
         );
       }
     });
 
-    $(window).load(function () {
+    $(window).load(function() {
       if ($('.third-footer-links').css('display') == 'none') {
         $('.first-footer-links').html(
-          '	<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">International Cannabis Weekly</a><a href="contact#team">International Country Review</a><a href="services">Our Services</a><a href="contact#team">Press</a><a href="contact#team">Sponsorship</a><a href="contact#team">Contact</a><a href="contact#team">Made by Marco Polo</a>'
+          '	<a href="/">Home</a><a href="/about">About Us</a><a href="/reports">Reports</a><a href="/international-cannabis-weekly">International Cannabis Weekly</a><a href="/news-insights">News + Insight</a><a href="/services">Our Services</a><a href="/press">Press</a><a href="/sponsorship">Sponsorship</a><a href="/contact">Contact</a>'
         );
       } else {
         $('.first-footer-links').html(
-          '		<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">The Team</a><a href="services">Our Services</a>'
+          '		<a href="/">Home</a><a href="/about">About Us</a><a href="/reports">Reports</a><a href="/about#team">The Team</a><a href="/services">Our Services</a>'
         );
       }
     });
   }
 
   function homeMobileLinks() {
-    $(window).resize(function () {
+    $(window).resize(function() {
       if ($('.first-menu-col').css('display') == 'none' && $(window).width <= 480) {
         $('.second-menu-col').html(
-          '<a class="white fw3 mb4 f1 db" href="/">Home</a><a class="white fw3 mb4 f1 db" href="reports">Reports</a><a class="white fw3 mb4 f1 db" href="services">Services</a><a class="white fw3 mb4 f1 db" href="international-country-review">International <br>Country Review</a><a class="white fw3 f1" href="international-cannabis-weekly">International<br>Cannabis Weekly</a><a class="white fw3  f1" href="press">Press</a><a class="white fw3  f1" href="contact">Contact</a>'
+          '<a class="white fw3 mb4 f1 db" href="/">Home</a><a class="white fw3 mb4 f1 db" href="/reports">Reports</a><a class="white fw3 mb4 f1 db" href="/services">Services</a><a class="white fw3 mb4 f1 db" href="/news-insight">News + Insight</a><a class="white fw3 f1" href="/international-cannabis-weekly">International<br>Cannabis Weekly</a><a class="white fw3  f1" href="press">Press</a><a class="white fw3  f1" href="/contact">Contact</a>'
         );
       } else {
         $('.first-footer-links').html(
-          '		<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">The Team</a><a href="services">Our Services</a>'
+          '		<a href="index">Home</a><a href="/about">About Us</a><a href="/reports">Reports</a><a href="/about#team">The Team</a><a href="/services">Our Services</a>'
         );
       }
     });
 
-    $(window).load(function () {
+    $(window).load(function() {
       if ($('.first-menu-col').css('display') == 'none' && $(window).width <= 480) {
         $('.second-menu-col').html(
-          '<a class="white fw3 mb4 f1 db" href="/">Home</a><a class="white fw3 mb4 f1 db" href="reports">Reports</a><a class="white fw3 mb4 f1 db" href="services">Services</a><a class="white fw3 mb4 f1 db" href="international-country-review">International <br>Country Review</a><a class="white fw3 f1" href="international-cannabis-weekly">International<br>Cannabis Weekly</a><a class="white fw3  f1" href="press">Press</a><a class="white fw3  f1" href="contact">Contact</a>'
+          '<a class="white fw3 mb4 f1 db" href="/">Home</a><a class="white fw3 mb4 f1 db" href="reports">Reports</a><a class="white fw3 mb4 f1 db" href="services">Services</a><a class="white fw3 mb4 f1 db" href="/news-insight">News + Insight</a><a class="white fw3 f1" href="international-cannabis-weekly">International<br>Cannabis Weekly</a><a class="white fw3  f1" href="press">Press</a><a class="white fw3  f1" href="contact">Contact</a>'
         );
       } else {
         $('.second-menu-col').html(
-          '		<a href="index">Home</a><a href="index#about">About Us</a><a href="reports">Reports</a><a href="contact#team">The Team</a><a href="services">Our Services</a>'
+          '		<a href="/">Home</a><a href="/about">About Us</a><a href="/reports">Reports</a><a href="/about#team">The Team</a><a href="/services">Our Services</a>'
         );
       }
     });
@@ -1245,8 +1247,10 @@ jQuery(function ($) {
         $(homeIndex[3]).removeClass('active');
         $(homeIndex[5]).removeClass('active');
         $(homeIndex[4]).addClass('active');
-      } else if (sections[5].offsetTop - 150 < topPosition &&
-        topPosition < sections[6].offsetTop - 100) {
+      } else if (
+        sections[5].offsetTop - 150 < topPosition &&
+        topPosition < sections[6].offsetTop - 100
+      ) {
         $(homeIndex).addClass('not-active');
         $(homeIndex[4]).removeClass('active');
         $(homeIndex[5]).addClass('active');
@@ -1263,7 +1267,6 @@ jQuery(function ($) {
     // $(window).on('load', () => {
     setTimeout(() => {
       $('.cannabis-world-container > *').addClass('translate-up');
-
     }, 500);
     // });
   }
@@ -1275,14 +1278,10 @@ jQuery(function ($) {
       );
 
       setTimeout(() => {
-
         document.querySelector('a.masonry-child:first-child').classList.add('animate-inview');
         document.querySelector('a.masonry-child:nth-child(2)').classList.add('animate-inview');
         document.querySelector('a.masonry-child:nth-child(3)').classList.add('animate-inview');
         document.querySelector('a.masonry-child:nth-child(4)').classList.add('animate-inview');
-
-
-
       }, 2500);
     });
   }
@@ -1326,7 +1325,8 @@ jQuery(function ($) {
     VanillaTilt.init(
       document.querySelectorAll(
         'a.icw-featured, .report-home img, a.icw-related, .previous-issue-nf-container'
-      ), {
+      ),
+      {
         max: 12,
         speed: 2000,
         scale: 1.02,
@@ -1338,7 +1338,7 @@ jQuery(function ($) {
   }
 
   function reportsImages() {
-    document.querySelectorAll('div.slides-area').forEach(function (button, i) {
+    document.querySelectorAll('div.slides-area').forEach(function(button, i) {
       const images = button.querySelectorAll('img');
       let currentImage = 0;
       let z = 1;
@@ -1408,7 +1408,7 @@ jQuery(function ($) {
   function homeType() {
     // $(window).on('load', () => {
     new TypeIt('#will-be-typed', {
-      strings: 'We’re a cannabis market research and consultancy company based in London.',
+      strings: 'We’re a cannabis market intelligence and consultancy company based in London.',
       speed: 80,
       cursor: true,
       autoStart: false
@@ -1418,16 +1418,14 @@ jQuery(function ($) {
 
   function useInView() {
     inView(
-        '.previous-issue-nf-container, .icw-theme-bullets ul li, .press-release, .pp-media > a, .overlay-pattern-sponsorship, .sponsorship-starter, .sponsorship-resources, .masonry-child'
-      )
+      '.previous-issue-nf-container, .icw-theme-bullets ul li, .press-release, .pp-media > a, .overlay-pattern-sponsorship, .sponsorship-starter, .sponsorship-resources, .masonry-child, .voice-industry-logos ul li'
+    )
       .on('enter', elements => {
         elements.classList.add('animate-inview');
       })
       .on('exit', elements => {});
 
     inView.threshold(0.4);
-
-
   }
 
   function useInViewHome() {
@@ -1442,7 +1440,7 @@ jQuery(function ($) {
 
   function servicesBg() {
     $(document).on('scroll', () => {
-      const topPosition = window.pageYOffset + 100;
+      const topPosition = window.pageYOffset + 300;
       const servicesSections = document.querySelectorAll('.services-content > div');
 
       if (topPosition < servicesSections[0].offsetTop) {
@@ -1451,19 +1449,23 @@ jQuery(function ($) {
         servicesSections[0].offsetTop < topPosition &&
         topPosition < servicesSections[1].offsetTop
       ) {
-        document.querySelector('body').style.backgroundColor = '#E3EEFF';
+        document.querySelector('body').style.backgroundColor = '';
+        $('.service-info p, .service-info h2, .service-info a').css('color', '');
       } else if (
         servicesSections[1].offsetTop < topPosition &&
         topPosition < servicesSections[2].offsetTop
       ) {
-        document.querySelector('body').style.backgroundColor = '#E3F6FF';
+        document.querySelector('body').style.backgroundColor = '#6F9AB7';
+        $('.service-info p, .service-info h2, .service-info a').css('color', '#fff');
       } else if (
         servicesSections[2].offsetTop < topPosition &&
         topPosition < topPosition + servicesSections[2].innerHeight
       ) {
-        document.querySelector('body').style.backgroundColor = '#F2FBFF';
+        document.querySelector('body').style.backgroundColor = '';
+        $('.service-info p, .service-info h2, .service-info a').css('color', '');
       } else {
         document.querySelector('body').style.backgroundColor = '';
+        $('.service-info p, .service-info h2, .service-info a').css('color', '');
       }
     });
   }
@@ -1528,17 +1530,16 @@ jQuery(function ($) {
 
     cannabisMap();
     appearClientsGrid();
-
   }
 
-  if ($('body').hasClass('post-template-icr-single')) {
+  if ($('body').hasClass('post-template-news-insight-single')) {
     progressBar();
     animateICRText();
     countryReviewImage();
     appearICRElements();
   }
 
-  if ($('body').hasClass('page-template-icr')) {
+  if ($('body').hasClass('page-template-news-insights')) {
     animateICR();
   }
 
@@ -1548,12 +1549,13 @@ jQuery(function ($) {
   }
 
   if ($('body').hasClass('page-template-press-sponsorship')) {
+    // appearClientsGrid();
+  }
+
+  if ($('body').hasClass('page-template-sponsorship')) {
     appearClientsGrid();
     animateSponsorshipNumbers();
   }
-
-
-
 
   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     tiltICW();
@@ -1568,5 +1570,4 @@ jQuery(function ($) {
   anchors();
   headerChange();
   openHeader();
-
 });

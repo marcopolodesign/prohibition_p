@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-	<div class="flex flex-column justify-between relative center w-50   pa5 mv6 newsletter-box relative">
+	<div class="flex flex-column justify-between relative center w-50 pa5 mt6 newsletter-box relative">
 		<div class="flex relative z-2 mb4 pb3">
 			<div class="relative appear words w-100">
 					<div class="absolute top-0 left-0 disenadoras">
@@ -65,9 +65,12 @@
 		<div class="absolute pp-patern-bg w-100 top-0 left-0 o-0 h-100"></div>
 	</div>
 
+	<div class="w-45 nice-img center mv5">
+		<img src="/wp-content/uploads/2019/01/NICEbanner-3.jpg">
+	</div>
 
-	<footer id="colophon" class="site-footer pp-light-blue-bg pa5">
-			<div class="flex justify-between">
+	<footer id="colophon" class="site-footer">
+			<div class="flex justify-between pp-light-blue-bg pa5">
 				<div class="footer-logo-social flex flex-column justify-between w-30">
 					<a class="footer-logo" href="index"><img src="/wp-content/uploads/2018/11/footer-logo.svg"></a>
 					<div class="footer-social">
@@ -79,36 +82,40 @@
 
 				<div class="first-footer-links footer-links flex flex-column justify-between">
 					<a href="/">Home</a>
-					<a href="/#about">About Us</a>
-					<a href="reports">Reports</a>
-					<a href="contact#team">The Team</a>
-					<a href="services">Our Services</a>
+					<a href="/about">About Us</a>
+					<a href="/reports">Reports</a>
+					<a href="/about#team">The Team</a>
+					<a href="/services">Our Services</a>
 				</div>
 
 				<div class="second-footer-links footer-links flex flex-column justify-between">
 					<!-- <a>International Deal Tracker</a> -->
-					<a href="international-country-review">European Country Review</a>
-					<a href="international-cannabis-weekly">European Cannabis Weeklky</a>
+					<a href="/news-insight">News + Insight</a>
+					<a href="/international-cannabis-weekly">International Cannabis Weeklky</a>
 					<!-- <a>European Cannabis Events</a> -->
 					<a target="_blank" href="http://cannabis-europa.com">Cannabis Europa</a>
-					<a href="press">Press Kit</a>
-					<a href="press#sponsorship">Sponsorship</a>
+					<a href="/press">Press Kit</a>
+					<a href="/sponsorship">Sponsorship</a>
 				</div>
 
 				<div class="third-footer-links footer-links flex flex-column justify-end min-height">
 					<!-- <a href="press">Press Kit</a>
 					<a href="press#sponsorship">Sponsorship</a> -->
-					<a href="privacy-policy">Privacy Policy</a>
-					<a href="contact">Contact Us</a>
+					<a href="/privacy-policy">Privacy Policy</a>
+					<a href="/contact">Contact Us</a>
 					<!-- <a target="_blank" href="http://marcopolo.agency">Made by Marco Polo</a> -->
 				</div>
 
 			</div>
 			
-		</div>
+			<div class="pp-dark-blue-bg pa4 flex center tc">
+			<p class="w-80 center white footer-last">Cannabis remains illegal in most countries so please reference your local laws in relation to medical or recreational use. Our reports and content are compiled for informational purposes only. They should not be construed as research reports for investment, legal, medical, health or tax advice.<br><br>©2019 PP Intelligence LTD.<br><span><a style="font-size: 14px;"class="desktop white mt2" href="https://www.europeancannabisholdings.com">www.europeancannabisholdings.com</a></span></p>
+						
+			</div>
+		
 <!-- .site-info -->
 	</footer>
-	<!-- <script type="text/javascript" src="/wp-content/themes/prohibition_partners/js/vanilla-tilt.js"></script>"#colophon -->
+	<!--"#colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

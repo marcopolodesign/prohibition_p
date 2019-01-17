@@ -9,66 +9,58 @@
   <div class="w-100 cover no-repeat relative page-header" style="background-color:<?php the_field('header_bg_color'); ?>; <?php image_background('header_bg_image'); ?>)">
     <div class="starter-div services-starter-div flex flex-column wrap center justify-center measure-wide lh-copy relative z-5 mobile-padding" >
 
-      <h1 class="white"><?php the_title(); ?></h1>
+      <h1 class="white "><?php the_title(); ?></h1>
       <h2 class="white"><?php the_field('pp_header_text'); ?></h2>
 
       
       </div>
 
-      <div class="services-icons mobile-padding flex justify-between relative z-5 measure-wide center">
+      <div class="services-icons mobile-padding flex justify-between items-center relative z-5 w-70 center mb3">
         <a href="#market" class="services-icons-link">
           <div class="market-service service">
-            <div class="service-icon bg-white pp-shadow flex center mb2">
-            <img class="icw-icon" src="/wp-content/uploads/2018/12/market.svg">
+            <div class="bg-white pp-shadow pp-corners flex center mb2">
+            <h3 class="pp-dark-blue tc pa4 margin-auto ">Data /</h3>
             </div>
-            <h3 class="pp-blue tc">Market Data<br>& Insights</h3>
+            
           </div>
         </a>
 
         <a href="#strategic" class="services-icons-link">
           <div class="market-service service">
-            <div class="service-icon bg-white pp-shadow flex center mb2">
-            <img class="icw-icon" src="/wp-content/uploads/2018/12/strategic.svg">
-
+            <div class="bg-white pp-shadow pp-corners flex center mb2">
+              <h3 class="margin-auto pp-dark-blue tc pa4 w-100">Strategy /</h3>
             </div>
-            <h3 class="pp-blue tc">Strategic<br>Consultancy</h3>
           </div>
         </a>
 
         <a href="#content" class="services-icons-link">
           <div class="market-service service">
-            <div class="service-icon content-icon bg-white pp-shadow flex center mb2">
-            <img class="icw-icon" src="/wp-content/uploads/2018/12/content.svg">
-
-
+            <div class="bg-white pp-shadow pp-corners flex center mb2">
+            <h3 class="margin-auto pp-dark-blue tc pa4">Intelligence /</h3>
             </div>
-            <h3 class="pp-blue tc">Content &<br>Creative</h3>
+            
           </div>
         </a>
-    </div>
+      </div>
+
+      
   </div>
 
-  <h1 class=" service-quote mobile-padding pl7 pr7 mt6 mb0 pt5 pb0 pp-dark-blue tc">The international cannabis industry is a rapidly changing landscape that presents one of the biggest opportunities for investors and entrepreneurs globally.</h1>
+ 
+  <h1 class=" service-quote mobile-padding pl7 pr7 mt5 mb0 pt5 pb0 pp-dark-blue tc">The international cannabis industry is a rapidly changing landscape that presents one of the biggest opportunities for investors and entrepreneurs globally.</h1>
 
-  <div class="services-content w-80 center mv5 ">
-    <div class="market-service-container" id="#market">
-      <div class="market-service-inner center container pv4 flex justify-between items-center">
+  <div class="services-content container center mv5 ">
+    <div class="market-service-container" id="market">
 
-        <div class="service-info w-50">
-            <div class="service-icon bg-white pp-shadow flex ml0 mb4">
-            <img class="icw-icon" src="/wp-content/uploads/2018/12/market.svg">
-            </div>
-            <h2 class="pp-blue mb2">Market Data<br>& Insights</h2>
-            <p class="pp-blue w-60 lh-copy">Detailed research and analysis for both regulators and investors interested in the potential of the International market.</p>
-            <div class="services-links content-link flex flex-wrap justify-between w-30 pr3 mv4">
-            <a class="fw3 mb3 mr3" href="reports">Reports</a>
-             <a class="fw3 mb3" href="international-country-review">International<br>Country Review</a>
-              <a class="fw3 mb3" href="international-cannabis-weekly">International<br>Cannabis Weekly</a>
-            </div>
+      <div class="market-service-inner center container pv4 flex flex-column justify-between items-center relative">
+
+        <div class="service-info center mb5">
+            <h2 class="pp-dark-blue tc mb2 f3">Data /</h2>
+            <p class="pp-blue w-60 margin-auto tc lh-copy">Bespoke research and market data for politicians, investors and key stakeholders in the cannabis industry. Understand the potential of the emerging frontier.</p>
         </div>
         
-        <div class="service-image w-50">
-          <img class="service-image pl4" src="/wp-content/uploads/2018/11/services-image@2x.png">
+        <div class="w-60 margin-auto">
+          <img class="service-image" src="/wp-content/uploads/2019/01/market-chart.svg">
         </div>
 
 
@@ -77,52 +69,47 @@
             
     </div>
 
-    <div class="strategic-service-container" id="strategic">
-      <div class="strategic-service-inner center container pv4 flex justify-between items-center">
+    <div class="strategic-service-container mv5" id="strategic">
+      <div class="strategic-service-inner center container pt4 flex justify-between flex-column items-center">
 
+        <div class="service-info items-center ">
+            <h2 class="pp-dark-blue mb2 tc f3">Strategy /</h2>
+            <p class="pp-blue w-60 mb margin-auto lh-copy tc">We assist you in deepening your understanding, making decisions and implementation in this rapidly changing and opaque sector:</p>
+            <div class="services-links flex flex-wrap justify-center mt4 pt2 mb3">
+              <a class="fw3 mb3" href="/contact">Market Analysis</a>
+              <a class="fw3 mb3" href="/contact">Regulatory Analysis</a>
+              <a class="fw3 mb3" href="/contact">Market Entry Strategy</a>
+              <a class="fw3 mb3" href="/contact">Business Development Support</a>
+              <a class="fw3 mb3" href="/contact">Patient/Consumer Research</a>
+              <a class="fw3 mb3" href="/contact">Licence application support</a>
+              <a class="fw3 mb3" href="/contact">Expert interview phone consultation</a>
 
-        <div class="service-image w-50">
-          <img class="strategic-image" src="/wp-content/uploads/2018/11/strategic-image.svg">
-        </div>
-
-
-        <div class="service-info w-50 items-end">
-            <div class="service-icon strategic-align bg-white pp-shadow flex mb4">
-            <img class="icw-icon" src="/wp-content/uploads/2018/12/strategic.svg">
-            </div>
-            <h2 class="pp-blue mb2 tr">Strategic<br>Consultancy</h2>
-            <p class="pp-blue w-60 lh-copy tr strategic-align">Market analysis and entry strategy including regulatory and competitor intelligence, regulatory relationships, licence applications and business development support.</p>
-            <div class="services-links flex flex-column w-50 flex-wrap justify-end mv4">
-              <a class="fw3 mb3" href="contact">Market Analysis</a>
-              <a class="fw3 mb3" href="contact">Regulatory Analysis</a>
-              <a class="fw3 mb3" href="contact">Market Entry Strategy</a>
-              <a class="fw3 mb3" href="contact">Business Development Support</a>
-              <a class="fw3 mb3" href="contact">Patient/Consumer Research</a>
               
             </div>
         </div>
-
       </div>
+      <div class="w-60 margin-auto">
+          <img class="strategic-image" src="/wp-content/uploads/2018/11/strategic-image.svg">
+        </div>
         
     </div>
     
     <div class="market-service-container" id="content">
-      <div class="market-service-inner container pv4 flex justify-between items-center center">
+      <div class="market-service-inner container pv4 flex justify-between items-center center flex-column">
 
-        <div class="service-info w-50">
-            <div class="service-icon content-icon bg-white pp-shadow flex mb4">
-            <img class="icw-icon" src="/wp-content/uploads/2018/12/content.svg">
-
-            </div>
-            <h2 class="pp-blue mb2">Content &<br>Creative</h2>
-            <p class="pp-blue w-60 lh-copy">Creative services that boost your business and brand. Grow your audience with cut-through content, marketing and design.</p>
-            <div class="services-links content-link flex flex-wrap justify-between w-30 mv4">
+        <div class="service-info ">
+            <h2 class="pp-dark-blue f3 mb2 tc">Intelligence /</h2>
+            <p class="pp-blue tc margin-auto w-60 lh-copy">Media, design and communications for international audiences. Create content that boosts your brand and grows your audience.</p>
+            <div class="services-links flex flex-wrap justify-center mt4 pt2 mb3">
+            <a class="fw3 mb3 mr3 content-link first-services-links items-center " href="reports">Reports</a>
+             <a class="fw3 mb3 first-services-links content-link" href="news-insight">News + Insight</a>
+              <a class="fw3 mb3 first-services-links" href="international-cannabis-weekly">International<br>Cannabis Weekly</a>
               <a class="fw3 mb3 content-link-a" href="contact">Request a quote</a>
             </div>
         </div>
         
-        <div class="service-image w-50">
-          <img class="service-image pl5" src="/wp-content/uploads/2018/11/content-image@2x-1.png">
+        <div class="service-image w-70">
+          <img class="service-image pl5" src="/wp-content/uploads/2018/11/services-image@2x.png">
         </div>
 
       </div>
